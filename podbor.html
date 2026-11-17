@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Подбор ассистентов – Академия Танзили Гариповой</title>
+  <meta name="description" content="Подберём бизнес или личного ассистента с бесплатной заменой 3 месяца по договору. Типовые позиции – за 3–7 рабочих дней.">
+  <link rel="icon" href="assets/img/logo.png">
+  <link rel="preload" href="assets/fonts/golos-text-400-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/oswald-700-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/oswald-300-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/fonts/fonts.css?v=2">
+  <link rel="stylesheet" href="assets/css/style.css?v=20261123b">
+  <link rel="stylesheet" href="assets/css/modals.css?v=20261121a">
+  <link rel="stylesheet" href="assets/css/pages.css?v=20261123d">
+</head>
+<body class="is-loading is-inner home page-personal page-podbor2">
+
+<!-- ============ ЛОАДЕР (быстрый) ============ -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader__curtain loader__curtain--left"></div>
+  <div class="loader__curtain loader__curtain--right"></div>
+  <div class="loader__brand">
+    <img class="loader__logo" src="assets/img/logo.png" alt="">
+    <div class="loader__cube">
+      <div class="loader__face loader__face--front"><span class="loader__word muted">Танзиля</span> <span class="loader__word">Гарипова</span></div>
+      <div class="loader__face loader__face--top"></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============ ШАПКА ============ -->
+<header class="header" id="header">
+  <div class="header__inner">
+    <a href="index.html" class="header__logo" aria-label="Танзиля Гарипова – на главную"><img src="assets/img/logo.png" alt=""></a>
+    <div class="header__right">
+      <a class="header__social header__social--wa" href="https://wa.me/79688888707" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="assets/img/whatsapp.svg" alt=""></a>
+      <a class="header__social" href="https://t.me/TanzilyaGaripova" target="_blank" rel="noopener" aria-label="Telegram"><img src="assets/img/telegram.svg" alt=""></a>
+      <a class="header__phone" href="tel:+79689488888"><img src="assets/img/call.svg" alt="">+7 968 948 8888</a>
+      <a class="btn btn--wine-grad header__cta" href="#modal-quiz" data-modal="quiz">Подобрать сотрудника</a>
+      <button class="btn btn--ghost-pink header__menu" type="button" id="menuOpen" aria-controls="menu" aria-expanded="false">Меню</button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ МЕНЮ ============ -->
+<div class="menu" id="menu" aria-hidden="true">
+  <div class="menu__top">
+    <a href="index.html" class="header__logo" aria-label="Танзиля Гарипова – на главную"><img src="assets/img/logo.png" alt=""></a>
+    <div class="header__right">
+      <a class="header__social header__social--wa" href="https://wa.me/79688888707" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="assets/img/whatsapp.svg" alt=""></a>
+      <a class="header__social" href="https://t.me/TanzilyaGaripova" target="_blank" rel="noopener" aria-label="Telegram"><img src="assets/img/telegram.svg" alt=""></a>
+      <a class="header__phone" href="tel:+79689488888"><img src="assets/img/call.svg" alt="">+7 968 948 8888</a>
+      <a class="btn btn--wine-grad header__cta" href="#modal-quiz" data-modal="quiz">Подобрать сотрудника</a>
+      <button class="btn btn--ghost-pink header__menu menu__close" type="button" id="menuClose">Закрыть</button>
+      <button class="menu__x" type="button" id="menuX" aria-label="Закрыть меню"><img src="assets/img/close.svg" alt=""></button>
+    </div>
+  </div>
+  <nav class="menu__body" aria-label="Меню сайта">
+    <div class="mm" id="mm">
+      <p class="mm__label">Направления</p>
+      <div class="mm__item is-active">
+        <button class="mm__tab" type="button" aria-expanded="true">Услуги<i class="mm__chev" aria-hidden="true"></i></button>
+        <div class="mm__pane">
+          <p class="mm__label">Услуги</p>
+          <div class="mm__pane-in"><a class="mm__all" href="uslugi.html">Все&nbsp;услуги</a><a href="podbor.html">Подбор ассистентов</a><a href="sharing.html">Шеринг ассистентов</a><a href="podbor-personala.html">Подбор любого персонала</a><a href="trudoustrojstvo.html">Трудоустройство</a></div>
+        </div>
+        <div class="mm__card">
+          <div class="mm__photo" style="background-image:url(assets/img/directions/dir-1.jpg)"><b>Подбор ассистентов</b><span>Найдём бизнес- или личного ассистента под ваши задачи. Типовые позиции – за 3–7 рабочих дней, бесплатная замена 3 месяца.</span></div>
+          <a class="btn btn--ghost-pink" href="#modal-quiz" data-modal="quiz">Подобрать ассистента</a>
+        </div>
+      </div>
+      <div class="mm__item">
+        <button class="mm__tab" type="button" aria-expanded="false">Обучение<i class="mm__chev" aria-hidden="true"></i></button>
+        <div class="mm__pane">
+          <p class="mm__label">Обучение</p>
+          <div class="mm__pane-in"><a href="obuchenie.html">Обучение ассистентов</a><a href="stupen-1.html">1&nbsp;ступень</a><a href="stupen-2.html">2&nbsp;ступень</a><a class="mm__gap" href="kurs.html">Обучение руководителей</a></div>
+        </div>
+        <div class="mm__card">
+          <div class="mm__photo" style="background-image:url(assets/img/directions/dir-2.jpg)"><b>Обучение ассистентов</b><span>Станьте бизнес-ассистентом или прокачайте навыки: 2 ступени онлайн-академии, сертификат. От 25&nbsp;000&nbsp;₽.</span></div>
+          <a class="btn btn--ghost-pink" href="obuchenie.html">Выбрать ступень</a>
+        </div>
+      </div>
+      <div class="mm__item">
+        <button class="mm__tab" type="button" aria-expanded="false">Танзиля<i class="mm__chev" aria-hidden="true"></i></button>
+        <div class="mm__pane">
+          <p class="mm__label">Танзиля</p>
+          <div class="mm__pane-in"><a href="sotrudnichestvo.html">Выступления</a><a href="konsultaciya.html">Личная консультация</a><a href="podcast.html">Подкасты</a><a href="knigi.html">Книги</a><a href="https://88dnei.garipova.biz" target="_blank" rel="noopener">Дневник благодарности</a></div>
+        </div>
+        <div class="mm__card">
+          <div class="mm__photo" style="background-image:url(assets/img/menu/tanzilya-2.jpg)"><b>Танзиля Гарипова</b><span>Основатель группы компаний. Автор книг о работе ассистента и делегировании.</span></div>
+          <a class="btn btn--ghost-pink" href="#modal-consult" data-modal="consult">Записаться на консультацию</a>
+        </div>
+      </div>
+      <div class="mm__item mm__item--link">
+        <a class="mm__tab" href="franshiza.html">Франшиза<i class="mm__arr" aria-hidden="true"></i></a>
+      </div>
+    </div>
+    <div class="menu__foot">
+      <div class="menu__links"><a href="index.html">Главная</a><a href="o-kompanii.html">О компании</a><a href="proekty.html">Наши проекты</a><a href="otzyvy.html">Отзывы</a><a href="voprosy.html">Вопросы и ответы</a><a href="kontakty.html">Контакты</a></div>
+      <a class="btn btn--wine-grad menu__cta" href="#modal-quiz" data-modal="quiz">Подобрать сотрудника</a>
+      <div class="menu__contacts">
+        <a class="header__social header__social--wa" href="https://wa.me/79688888707" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="assets/img/whatsapp.svg" alt=""></a>
+        <a class="header__social" href="https://t.me/TanzilyaGaripova" target="_blank" rel="noopener" aria-label="Telegram"><img src="assets/img/telegram.svg" alt=""></a>
+        <a class="header__phone" href="tel:+79689488888"><img src="assets/img/call.svg" alt="">+7 968 948 8888</a>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<main class="page">
+
+<!-- ============ Хлебные крошки ============ -->
+<nav class="crumbs container" aria-label="Хлебные крошки">
+  <a href="index.html">Главная</a><span aria-hidden="true">›</span><span aria-current="page">Подбор ассистентов</span>
+</nav>
+
+<main>
+<!-- ============ 01 Первый экран (макет 1008:5941): текст слева, трое ассистентов и дуга справа ============ -->
+<section class="ahero pshero pshero--asst">
+  <div class="ahero__stage pshero__stage">
+    <img class="ahero__arc pshero__arc" src="assets/img/podbor/hero-arc.svg" alt="" aria-hidden="true">
+    <div class="ahero__text pshero__text">
+      <h1 class="ahero__title">Подберём бизнес-<br>или личного ассистента<br><span>с бесплатной заменой<br>3 месяца</span> <i class="ahero__st">по договору</i></h1>
+      <p class="ahero__lead">Ассистенты и помощники руководителей – в офис, на удалёнку и для личных задач. Подбор начинаем в течение 24 часов, типовые позиции закрываем за 3–7 рабочих дней.</p>
+      <div class="ahero__actions">
+        <a class="btn btn--white" href="#final">Подобрать ассистента</a>
+        <a class="btn btn--outline-white" href="#modal-criteria" data-modal="criteria">Критерии подбора</a>
+      </div>
+    </div>
+    <div class="ahero__art pshero__art" aria-hidden="true"><img class="pshero__arc-m" src="assets/img/podbor/hero-arc-m.svg" alt=""><picture><source media="(max-width: 760px)" srcset="assets/img/podbor/hero-team-m.webp"><img class="ahero__photo" src="assets/img/podbor/hero-team.webp" alt="" fetchpriority="high"></picture></div>
+    <div class="ahero__fade" aria-hidden="true"></div>
+  </div>
+  <div class="ahero__nums">
+    <div><b>с 2015</b>подбираем персонал<br>по всему миру</div>
+    <div><b>287</b>запросов закрыли<br>в 2025 году</div>
+    <div><b>3 из 287</b>кандидатов заменили<br>бесплатно</div>
+    <div><b>95%</b>подобранных работают<br>больше года</div>
+    <div><b>17 стран</b>где&nbsp;работают наши<br>кандидаты</div>
+  </div>
+</section>
+
+<section class="section section--dark pclients" id="clients">
+  <div class="container">
+    <div class="sec-head sec-head--dark">
+      <h2 class="sec-title">Нам доверяют подбор ассистентов</h2>
+      <div class="sec-head__row">
+        <p class="sec-head__label">Клиенты</p>
+        <p class="sec-head__aside">Компании, которым мы подобрали сотрудников.</p>
+      </div>
+    </div>
+    <div class="pclients__grid">
+      <span class="pclients__item"><img src="assets/img/logos/fig/1-grebenuk.png" alt="Grebenuk Resulting" width="126" height="48"></span>
+      <span class="pclients__item"><img src="assets/img/logos/fig/2-delovaya.png" alt="Деловая среда" width="126" height="48"></span>
+      <span class="pclients__item"><img src="assets/img/logos/fig/3-skolkovo.png" alt="Сколково" width="118" height="48"></span>
+      <span class="pclients__item"><img src="assets/img/logos/fig/4-mercedes.png" alt="Mercedes-Benz" width="73" height="48"></span>
+      <span class="pclients__item"><img src="assets/img/logos/fig/5-moscow.png" alt="Правительство Москвы" width="119" height="44"></span>
+      <span class="pclients__item"><img src="assets/img/logos/fig/6-ntv.png" alt="НТВ" width="44" height="48"></span>
+      <span class="pclients__item"><img src="assets/img/logos/clients/01-vk.svg" alt="ВКонтакте"></span>
+      <span class="pclients__item"><img src="assets/img/logos/clients/02-mailru.svg" alt="Mail.ru"></span>
+      <span class="pclients__item"><img src="assets/img/logos/clients/03-roscosmos.svg" alt="Роскосмос"></span>
+      <span class="pclients__item"><img src="assets/img/logos/clients/04-sber.svg" alt="Сбербанк"></span>
+      <span class="pclients__item"><img class="is-sm" src="assets/img/logos/clients/05-vtb.svg" alt="ВТБ"></span>
+      <span class="pclients__item"><img src="assets/img/logos/clients/06-synergy.png" alt="Университет «Синергия»"></span>
+      <span class="pclients__item"><img src="assets/img/logos/clients/07-gazprom.svg" alt="Газпром"></span>
+      <span class="pclients__item"><img src="assets/img/logos/clients/08-rosneft.svg" alt="Роснефть"></span>
+      <span class="pclients__item"><img src="assets/img/logos/clients/09-tashir.png" alt="Ташир"></span>
+      <span class="pclients__item"><img src="assets/img/logos/clients/10-lukoil.svg" alt="Лукойл"></span>
+      <span class="pclients__item"><img src="assets/img/logos/clients/11-rosatom.svg" alt="Росатом"></span>
+      <span class="pclients__item"><img src="assets/img/logos/clients/12-rzd.svg" alt="РЖД"></span>
+      <span class="pclients__item"><img src="assets/img/logos/clients/13-mosenergo.svg" alt="Мосэнерго"></span>
+      <span class="pclients__item"><img src="assets/img/logos/clients/14-yandex.svg" alt="Яндекс"></span>
+      <span class="pclients__item"><img src="assets/img/logos/clients/15-mvideo.svg" alt="М.Видео"></span>
+      <span class="pclients__item"><img src="assets/img/logos/clients/16-x5.svg" alt="X5 Group"></span>
+      <span class="pclients__item"><img src="assets/img/logos/clients/17-rmi.png" alt="Россия – моя история"></span>
+      <span class="pclients__item"><img src="assets/img/logos/clients/18-wb.svg" alt="Wildberries"></span>
+    </div>
+  </div>
+</section>
+<!-- ============ Кого подбираем (макет 983:4624) ============ -->
+<section class="section section--dark psystem cwhen pwho">
+  <div class="container">
+    <h2 class="sec-title">Кого подбираем</h2>
+    <ol class="psystem__grid">
+      <li class="scard scard--ic scard--foot reveal"><img class="card-ic" src="assets/img/3d/brief.png" alt="" aria-hidden="true" loading="lazy"><span class="num">(01)</span><h3>Бизнес-ассистент</h3><p>Календарь, встречи, документы, контроль поручений команды</p></li>
+      <li class="scard scard--ic scard--foot reveal"><img class="card-ic" src="assets/img/3d/wallet.png" alt="" aria-hidden="true" loading="lazy"><span class="num">(02)</span><h3>Личный ассистент</h3><p>Быт, семья, поездки, покупки, личные поручения</p></li>
+      <li class="scard scard--ic scard--foot reveal"><img class="card-ic" src="assets/img/3d/kons.png" alt="" aria-hidden="true" loading="lazy"><span class="num">(03)</span><h3>Удалённый ассистент</h3><p>Работает онлайн из любой страны, в вашем часовом поясе</p></li>
+      <li class="scard scard--ic scard--foot reveal scard--wine"><img class="card-ic" src="assets/img/3d/deleg.png" alt="" aria-hidden="true" loading="lazy"><span class="num">(04)</span><h3>Ассистент-менеджер</h3><p>Проекты, CRM, отчёты, координация подрядчиков</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ Знакомо? – колода как «Как мы отвечаем за результат» (макет 982:2947) ============ -->
+<section class="deck deck--4" id="process">
+  <div class="deck__sticky">
+  <div class="container deck__head">
+    <h2 class="deck__title">Узнали себя хотя бы в одном пункте?</h2>
+    <p class="deck__lead">Ассистент это&nbsp;решит</p>
+  </div>
+  <div class="deck__stage">
+    <div class="dcardx-slot"><article class="dcardx dcardx--wine" style="--r: 5.33deg"><h3>Работаете до ночи</h3><p>Потому что «некому помочь», все&nbsp;задачи замыкаются на вас.</p><img class="dcardx__3d dcardx__3d--r" style="--ir:-8deg" src="assets/img/3d/night.png" alt="" aria-hidden="true" loading="lazy"></article></div>
+    <div class="dcardx-slot"><article class="dcardx dcardx--white" style="--r: 0deg"><h3>HR тянет резину</h3><p>А собеседования с кандидатами проводите вы сами.</p><img class="dcardx__3d dcardx__3d--l" style="--ir:8deg" src="assets/img/3d/hourglass.png" alt="" aria-hidden="true" loading="lazy"></article></div>
+    <div class="dcardx-slot"><article class="dcardx dcardx--wine" style="--r: -8.49deg"><h3>Трое ассистентов «не зашли»</h3><p>Попыток было несколько, и каждый раз человек не тот.</p><img class="dcardx__3d dcardx__3d--r" style="--ir:-8deg" src="assets/img/3d/puzzle.png" alt="" aria-hidden="true" loading="lazy"></article></div>
+    <div class="dcardx-slot"><article class="dcardx dcardx--white" style="--r: 0deg"><h3>Проще сделать самому</h3><p>Нет времени объяснять задачи и передавать дела.</p><img class="dcardx__3d dcardx__3d--l" style="--ir:8deg" src="assets/img/3d/hand-folder.png" alt="" aria-hidden="true" loading="lazy"></article></div>
+  </div>
+  </div>
+</section>
+
+<!-- ============ Два пути (макет 997:3215): карточки как «Для бизнеса / для дома» ============ -->
+<section class="section section--light career career--v2 pbizhome" id="paths">
+  <div class="container">
+    <div class="sec-head">
+      <h2 class="sec-title">Два пути – <span class="tsticker" style="--r:-5deg">выберите свой</span></h2>
+      <div class="sec-head__row">
+        <p class="sec-head__label">Есть ассистент, но он не тянет?</p>
+        <p class="sec-head__aside">Не меняйте человека, доведите его до уровня в нашей Академии.</p>
+      </div>
+    </div>
+    <div class="career__grid">
+      <div class="ccard ccard--champ reveal">
+        <div class="ccard__head"><h3>Подобрать нового</h3><div class="ccard__art"><span class="cst cst--w" style="left:335px;top:61px;width:140px;--r:-5deg">Финалисты</span><img src="assets/img/3d/podbor.png" alt="" style="left:478px;top:6px;width:150px;height:150px;--r:0deg"><span class="cst cst--b" style="left:324px;top:109px;width:138px;--r:-14deg">через 7 дней</span></div></div>
+        <ul><li>✓ Под ваши задачи, нишу и формат работы</li><li>✓ Тестовое, рекомендации, финпроверка</li><li>✓ Финалисты – через 7 дней</li><li>✓ Замена по договору</li></ul>
+      </div>
+      <div class="ccard ccard--wine reveal">
+        <div class="ccard__head"><h3>Обучить вашего</h3><div class="ccard__art"><span class="cst cst--w" style="left:345px;top:61px;width:141px;--r:-5deg">В Академии</span><img src="assets/img/3d/obuch.png" alt="" style="left:459px;top:7px;width:175px;height:175px;--r:0deg"><span class="cst cst--b" style="left:327px;top:104px;width:127px;--r:-10deg">без замены</span></div></div>
+        <ul><li>✓ Ваш сотрудник проходит программу Академии</li><li>✓ Отрабатывает задания на вашем бизнесе</li><li>✓ Вы не теряете человека, который знает контекст</li><li>✓ Системная работа вместо хаотичной помощи</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ============ Что передать ассистенту (макет 1003:5877) ============ -->
+<section class="section section--light career career--v2 pbizhome" id="first-month">
+  <div class="container">
+    <div class="sec-head">
+      <h2 class="sec-title">Что передать ассистенту <span class="tsticker" style="--r:-5deg">в первый месяц</span></h2>
+      <div class="sec-head__row">
+        <p class="sec-head__label">Первый месяц</p>
+        <p class="sec-head__aside">И что пока лучше оставить себе.</p>
+      </div>
+    </div>
+    <div class="career__grid">
+      <div class="ccard ccard--champ reveal">
+        <div class="ccard__head"><h3>Подходит <br class="only-m">для старта</h3><div class="ccard__art"><span class="cst cst--w" style="left:335px;top:61px;width:120px;--r:-5deg">Передать</span><img src="assets/img/3d/brief.png" alt="" style="left:478px;top:6px;width:150px;height:150px;--r:0deg"><span class="cst cst--b" style="left:340px;top:109px;width:90px;--r:-14deg">сразу</span></div></div>
+        <ul><li>✓ Календарь, встречи и напоминания</li><li>✓ Документы, таблицы и простые отчёты</li><li>✓ Поиск подрядчиков и сбор предложений</li><li>✓ Ведение CRM и клиентской базы</li><li>✓ Бронирования, поездки, личные поручения</li></ul>
+      </div>
+      <div class="ccard ccard--wine reveal">
+        <div class="ccard__head"><h3>Пока не передавать</h3><div class="ccard__art"><span class="cst cst--w" style="left:331px;top:61px;width:128px;--r:-5deg">Оставить</span><img src="assets/img/3d/safe.png" alt="" style="left:453px;top:0;width:180px;height:180px;--r:0deg"><span class="cst cst--b" style="left:362px;top:98px;width:72px;--r:-10deg">себе</span></div></div>
+        <ul><li>✕ Управление командой или отделом</li><li>✕ Платежи без согласованного регламента</li><li>✕ Юридические и бухгалтерские решения</li><li>✕ Стратегические решения за собственника</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Как мы проверяем (макет 982:2984): список как «Куда обратиться» ============ -->
+<section class="section section--light clist clist--contacts pcheck">
+  <div class="container clist__grid">
+    <div class="clist__head">
+      <h2 class="sec-title">Как мы проверяем <br>каждого кандидата</h2>
+      <p>Проверяем опыт, рекомендации, мотивацию и софт-скиллы. При необходимости подключаем службу безопасности.</p>
+    </div>
+    <div class="clist__list">
+      <div class="clist__item reveal"><img class="clist__ic" src="assets/img/3d/diagnostika.png" alt="" aria-hidden="true" loading="lazy"><h3>Диагностика</h3><p>Интервью по профилю должности: опыт, мотивация, стиль работы</p></div>
+      <div class="clist__item reveal"><img class="clist__ic" src="assets/img/3d/hardskills.png" alt="" aria-hidden="true" loading="lazy"><h3>Hard skills</h3><p>Тестовое задание по профилю должности</p></div>
+      <div class="clist__item reveal"><img class="clist__ic" src="assets/img/3d/softskills.png" alt="" aria-hidden="true" loading="lazy"><h3>Soft skills</h3><p>Ответственность, такт, стрессоустойчивость, внимание к деталям</p></div>
+      <div class="clist__item reveal"><img class="clist__ic" src="assets/img/3d/proverki.png" alt="" aria-hidden="true" loading="lazy"><h3>Проверки</h3><p>Рекомендации с прошлых мест, финпроверка, при необходимости – служба безопасности</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Что вы получаете (макет 984:2939): фото-карточки как «Гарантия» на главной ============ -->
+<section class="section section--light guarantee pget">
+  <div class="container guarantee__inner">
+    <div class="guarantee__left">
+      <p class="sec-head__label sec-head__label--wine">Сопровождение на всех этапах.</p>
+      <h2 class="guarantee__title">Что вы получаете<br><span>вместе с ассистентом</span> <span class="tsticker" style="--r:5deg">под ключ</span></h2>
+      <p class="guarantee__lead">Мы не только находим человека, но и помогаем ему встроиться в вашу работу.</p>
+    </div>
+    <div class="guarantee__cards">
+      <div class="gcard reveal"><div class="gcard__media"><img src="assets/img/podbor/get-portret.jpg" alt="" loading="lazy"></div><div class="gcard__body"><h3>Портрет и стратегия</h3><div class="gcard__row"><p>интервью с вами</p><span class="hand">шаг 1</span></div></div></div>
+      <div class="gcard reveal"><div class="gcard__media"><img src="assets/img/podbor/get-finalisty.jpg" alt="" loading="lazy"></div><div class="gcard__body"><h3>Проверенные финалисты</h3><div class="gcard__row"><p>выбираете вы – после тестового, рекомендаций и проверок</p><span class="hand">шаг 2</span></div></div></div>
+      <div class="gcard reveal"><div class="gcard__media"><img src="assets/img/podbor/get-podgotovka.jpg" alt="" loading="lazy"></div><div class="gcard__body"><h3>Подготовка ассистента</h3><div class="gcard__row"><p>под ваш стиль работы и задачи</p><span class="hand">шаг 3</span></div></div></div>
+      <div class="gcard reveal"><div class="gcard__media"><img src="assets/img/podbor/get-soprovozhdenie.jpg" alt="" loading="lazy"></div><div class="gcard__body"><h3>Сопровождение</h3><div class="gcard__row"><p>помогаем в первые недели работы</p><span class="hand">шаг 4</span></div></div></div>
+      <div class="gcard reveal"><div class="gcard__media"><img src="assets/img/podbor/get-menedzher.jpg" alt="" loading="lazy"></div><div class="gcard__body"><h3>Персональный менеджер</h3><div class="gcard__row"><p>и поддержка 24/7</p><span class="hand">шаг 5</span></div></div></div>
+      <div class="gcard reveal"><div class="gcard__media"><img src="assets/img/podbor/get-zamena.jpg" alt="" loading="lazy"></div><div class="gcard__body"><h3>Бесплатная замена</h3><div class="gcard__row"><p>в течение 3 месяцев – по договору</p><span class="hand">шаг 6</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="scene scene--pricing scene--choose scene--one" id="choose">
+  <div class="scene__sticky">
+    <div class="scene__stage">
+      <div class="scene__line scene__line--c"></div>
+      <div class="scene__line scene__line--l"></div>
+      <div class="scene__line scene__line--r"></div>
+      <p class="scene__title scene__title--l">Стоимость</p>
+      <p class="scene__title scene__title--r">и гарантия</p>
+
+      <div class="tariffs">
+        <article class="tariff tariff--champ">
+  <div class="tariff__top">
+    <div class="tariff__tags"><span class="tariff__tag">Цена после брифа</span></div>
+    <h3 class="tariff__price">Подбор ассистента + замена</h3>
+    <p class="tariff__sub">Гарантия бесплатной замены, если ассистент не подошёл, новый подбор без доплаты.</p><img class="tariff__3d" src="assets/img/3d/success.png" alt="" aria-hidden="true">
+  </div>
+  <div class="tariff__bottom">
+    <ul>
+      <li>✓ Ассистент не подошёл, новый подбор бесплатно</li>
+      <li>✓ 2025 год: 287 запросов, замена – в 3 случаях</li>
+      <li>✓ Во всех трёх заменили бесплатно</li>
+      <li>✓ 95% подобранных ассистентов работают больше года</li>
+    </ul>
+    <div class="tariff__btns">
+      <a class="btn btn--wine-grad" href="#modal-dogovor" data-modal="dogovor">Запросить пример договора</a>
+      <a class="btn btn--outline-dark" href="#final">Обсудить мою задачу</a>
+    </div>
+  </div>
+</article>
+      </div>
+
+      <p class="scene__note scene__note--pricing">Подбор – по договору · бесплатная замена 3 месяца · 95% подобранных работают больше года</p>
+    </div>
+  </div>
+</section>
+<section class="founder founder--bg founder--about" id="about">
+  <div class="founder__wash" aria-hidden="true"></div>
+  <div class="founder__art">
+    <picture><source media="(max-width: 760px)" srcset="assets/img/founder-m-photo.png"><img class="founder__bg" src="assets/img/founder-bg-v2.jpg" alt="Танзиля Гарипова"></picture>
+    <div class="founder__blur" aria-hidden="true"></div>
+    <div class="founder__quote">
+      <p>«Я не просто подбираю и обучаю. Я строю команды, которые работают автономно»</p>
+      <img class="founder__quote-line" src="assets/img/founder-quote-line.svg" alt="">
+      <span>Танзиля Гарипова</span>
+    </div>
+  </div>
+  <div class="container founder__inner">
+    <div class="founder__info">
+      <h2 class="sec-title">287 запросов в 2025 году – персональная гарантия Танзили</h2>
+      <ol class="founder__facts">
+        <li><span class="num">( 01 )</span><p>Только в 3 случаях кандидат не подошёл с первого раза</p></li>
+        <li><span class="num">( 02 )</span><p>Во всех трёх мы бесплатно заменили его и довели подбор до результата</p></li>
+        <li><span class="num">( 03 )</span><p><span class="only-d">95% подобранных сотрудников работают больше года</span><span class="only-m">6000+ предпринимателей и руководителей выстроили с ней работу с ассистентом</span></p></li>
+        <li><span class="num">( 04 )</span><p><span class="only-d">Подбираем персонал с 2015 года – по всему миру</span><span class="only-m">Автор книг о работе ассистента и делегировании</span></p></li>
+        <li><span class="num">( 05 )</span><p><span class="only-d">Гарантия замены 3 месяца прописана в договоре</span><span class="only-m">Победитель премии Successful Ladies Awards как эксперт по подготовке и подбору ассистентов</span></p></li>
+      </ol>
+      <div class="founder__btns">
+        <a class="btn btn--white" href="#final">Подобрать ассистента</a>
+        <a class="btn btn--outline-white" href="#modal-dogovor" data-modal="dogovor">Запросить пример договора</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ============ Кейс подбора (макет 983:4873) ============ -->
+<section class="section section--dark phire2" id="case">
+  <div class="container">
+    <div class="sec-head sec-head--dark">
+      <h2 class="sec-title">Кейс подбора</h2>
+      <div class="sec-head__row">
+        <p class="sec-head__label">Подбор</p>
+        <p class="sec-head__aside">Реальная история клиентки: кого искали, как проверяли и что изменилось.</p>
+      </div>
+    </div>
+    <article class="hcase2 reveal">
+      <div class="hcase2__photo"><img src="assets/img/proekty/case-marina.jpg" alt="" loading="lazy"></div>
+      <div class="hcase2__body">
+        <p class="hcase2__num">(01)</p>
+        <h3>Марина Журавлёва</h3>
+        <p class="hcase2__desc">Финансовый консультант, работает онлайн с Бали. Задача: нужен ассистент, который умеет работать онлайн, раньше всё&nbsp;приходилось перепроверять самой.</p>
+        <dl class="hcase2__facts"><div><dt>Срок подбора</dt><dd>8 дней</dd></div><div><dt>Формат</dt><dd>Удалёнка</dd></div><div><dt>Результат</dt><dd>Освободилось ≈ 4 часа в день</dd></div></dl>
+        <ul class="hcase2__list"><li>Диагностика задач и портрет кандидата</li><li>Финпроверка, рекомендации, тестовое задание</li><li>Кандидат с опытом в онлайн-школах</li></ul>
+        <p class="hcase2__quote">«Мне подобрали человека, с которым сначала прошли диагностику. Теперь ведёт бюджеты, записывает детей в секции, готовит документы. Я спокойна.»</p>
+        <div class="hcase2__btns"><a class="btn btn--white" href="#modal-quiz" data-modal="quiz">Подобрать ассистента</a><a class="hcase2__more" href="#modal-lead" data-modal="lead" data-topic="Подбор ассистента">Обсудить мою задачу →</a></div>
+      </div>
+    </article>
+  </div>
+</section>
+<section class="section section--dark leadform leadform--final" id="lead" data-as-modal="criteria">
+  <img class="leadform__circle" src="assets/img/circle-small.svg" alt="">
+  <div class="container leadform__inner">
+    <div class="leadform__left">
+      <h2 class="sec-title">Составим критерии подбора для вашего сотрудника – бесплатно</h2>
+      <ol class="form__steps"><li><span class="num">(01)</span>Свяжемся в рабочее время: Пн–Пт, 9:00–18:00</li><li><span class="num">(02)</span>Уточним, кого и для каких задач ищете</li><li><span class="num">(03)</span>Пришлём критерии подбора и гайд</li></ol>
+      <div class="contact-card">
+        <img class="contact-card__ava" src="assets/img/contact-ava.jpg" alt="">
+        <div><b>Танзиля Гарипова</b><a href="tel:+79689488888"><span class="flag"></span>+7 968 948 8888</a></div>
+        <i></i><span>Пн–Пт<br>9:00–18:00</span>
+      </div>
+    </div>
+    <form class="form" novalidate>
+      <input class="form__input" type="text" name="name" placeholder="Имя" autocomplete="name">
+      <label class="form__phone"><span class="flag"></span><span>+7</span><input type="tel" name="phone" placeholder="Телефон" autocomplete="tel-national"></label>
+      <input class="form__input" type="text" name="who" placeholder="Кого ищете">
+      <div class="form__via"><span>Как удобнее связаться?</span>
+        <div class="seg"><button type="button" class="is-active"><img src="assets/img/whatsapp.svg" alt="">Whats App</button><button type="button"><img src="assets/img/telegram.svg" alt="">Telegram</button><button type="button">Звонок</button></div>
+      </div>
+      <button class="btn btn--white form__submit" type="submit">Составить критерии</button>
+      <label class="consent"><input type="checkbox" name="consent"><span class="consent__box" aria-hidden="true"></span><span class="form__policy">Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных</span></label>
+    </form>
+  </div>
+</section>
+<section class="section section--dark faq qsec" id="faq" data-qa>
+  <div class="qsec__grid">
+    <div class="qsec__main">
+      <h2 class="sec-title">Частые вопросы</h2>
+      <div class="faq__list">
+        <details class="qa" open><summary><span class="qa__num">01</span><span class="qa__q">Сколько стоит подбор и от чего зависит цена?</span><svg class="qa__arrow" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M4 4L28 28M28 8V28H8" stroke="currentColor" stroke-width="3"/></svg></summary><p>Подбор стоит одну месячную зарплату ассистента, платите один раз и получаете гарантию замены 3 месяца по договору. Если оплатить сразу нет возможности, есть шеринг: каждый месяц платите нашей компании за административные услуги, от 30 000 ₽. Самый бюджетный вариант – объявление в чате ассистентов за 1 500 ₽.</p></details>
+        <details class="qa"><summary><span class="qa__num">02</span><span class="qa__q">Как быстро вы найдёте ассистента?</span><svg class="qa__arrow" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M4 4L28 28M28 8V28H8" stroke="currentColor" stroke-width="3"/></svg></summary><p>Подбор начинаем в течение 24 часов после заявки. Типовые позиции закрываем за 3–7 рабочих дней, редкие и управленческие – от 10 дней.</p></details>
+        <details class="qa"><summary><span class="qa__num">03</span><span class="qa__q">Что будет, если ассистент не подойдёт или уйдёт?</span><svg class="qa__arrow" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M4 4L28 28M28 8V28H8" stroke="currentColor" stroke-width="3"/></svg></summary><p>Если в течение 3 месяцев человек не подошёл, проведём новый подбор бесплатно, это&nbsp;прописано в договоре. В 2025 году из 287 запросов замена понадобилась в 3 случаях.</p></details>
+        <details class="qa"><summary><span class="qa__num">04</span><span class="qa__q">Чем бизнес-ассистент отличается от личного?</span><svg class="qa__arrow" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M4 4L28 28M28 8V28H8" stroke="currentColor" stroke-width="3"/></svg></summary><p>Бизнес-ассистент ведёт рабочие задачи: календарь, встречи, документы, контроль поручений. Личный – быт, семью, поездки и покупки. Часто задачи совмещают, разберём это&nbsp;на брифе.</p></details>
+        <details class="qa"><summary><span class="qa__num">05</span><span class="qa__q">Можно подобрать удалённого ассистента в другой стране?</span><svg class="qa__arrow" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M4 4L28 28M28 8V28H8" stroke="currentColor" stroke-width="3"/></svg></summary><p>Да. У нас клиенты в 17 странах. Подбираем с учётом часового пояса, менталитета и правовых норм.</p></details>
+        <details class="qa"><summary><span class="qa__num">06</span><span class="qa__q">Как вы проверяете кандидатов?</span><svg class="qa__arrow" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M4 4L28 28M28 8V28H8" stroke="currentColor" stroke-width="3"/></svg></summary><p>Проверяем опыт, рекомендации, мотивацию, ценности и софт-скиллы, даём тестовое задание. При необходимости подключаем службу безопасности.</p></details>
+        <details class="qa"><summary><span class="qa__num">07</span><span class="qa__q">Можно обучить моего текущего ассистента вместо подбора?</span><svg class="qa__arrow" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M4 4L28 28M28 8V28H8" stroke="currentColor" stroke-width="3"/></svg></summary><p>Да. Ваш ассистент может пройти обучение в Академии ассистентов, программа и тарифы на странице обучения, от 25 000 ₽.</p></details>
+        <details class="qa"><summary><span class="qa__num">08</span><span class="qa__q">Работаете по договору? Какие документы получу?</span><svg class="qa__arrow" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M4 4L28 28M28 8V28H8" stroke="currentColor" stroke-width="3"/></svg></summary><p>Да, работаем по договору, гарантия замены прописана в нём. Пример договора можно посмотреть до начала работы.</p></details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--dark leadform leadform--final" id="final">
+  <img class="leadform__circle" src="assets/img/circle-small.svg" alt="">
+  <div class="container leadform__inner">
+    <div class="leadform__left">
+      <h2 class="sec-title">Получите предложение с расчётом стоимости подбора</h2>
+      <ol class="form__steps"><li><span class="num">(01)</span>Свяжемся в рабочее время: Пн–Пт, 9:00–18:00</li><li><span class="num">(02)</span>Уточним задачу и формат работы</li><li><span class="num">(03)</span>Пришлём предложение с расчётом стоимости</li></ol>
+      <div class="contact-card">
+        <img class="contact-card__ava" src="assets/img/contact-ava.jpg" alt="">
+        <div><b>Танзиля Гарипова</b><a href="tel:+79689488888"><span class="flag"></span>+7 968 948 8888</a></div>
+        <i></i><span>Пн–Пт<br>9:00–18:00</span>
+      </div>
+    </div>
+    <form class="form" novalidate>
+      <input class="form__input" type="text" name="name" placeholder="Имя" autocomplete="name">
+      <label class="form__phone"><span class="flag"></span><span>+7</span><input type="tel" name="phone" placeholder="Телефон" autocomplete="tel-national"></label>
+      <div class="form__via"><span>Как удобнее связаться?</span>
+        <div class="seg"><button type="button" class="is-active"><img src="assets/img/whatsapp.svg" alt="">Whats App</button><button type="button"><img src="assets/img/telegram.svg" alt="">Telegram</button><button type="button">Звонок</button></div>
+      </div>
+      <button class="btn btn--white form__submit" type="submit">Получить расчёт</button>
+      <label class="consent"><input type="checkbox" name="consent"><span class="consent__box" aria-hidden="true"></span><span class="form__policy">Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных</span></label>
+    </form>
+  </div>
+</section>
+</main>
+
+
+<!-- ============ Подвал ============ -->
+<footer class="fx">
+  <div class="fx__top">
+    <a class="fx__brand" href="index.html" aria-label="Группа компаний Танзили Гариповой – на главную"><img src="assets/img/logo-group.png" alt="" width="42" height="45"><span>Группа Компаний<br>Танзили Гариповой</span></a>
+    <nav class="fx__col"><h4>Меню</h4><div><a href="index.html">Главная</a><a href="o-kompanii.html">О компании</a><a href="proekty.html">Наши проекты</a><a href="otzyvy.html">Отзывы</a><a href="voprosy.html">Вопросы и ответы</a><a href="kontakty.html">Контакты</a></div></nav>
+    <nav class="fx__col"><h4><a href="uslugi.html">Услуги</a></h4><div><a href="podbor.html">Подбор ассистентов</a><a href="sharing.html">Шеринг ассистентов</a><a href="podbor-personala.html">Подбор любого персонала</a><a href="trudoustrojstvo.html">Трудоустройство</a></div></nav>
+    <nav class="fx__col"><h4>Обучение</h4><div><a href="kurs.html">Обучение руководителей</a><a href="obuchenie.html">Обучение ассистентов</a><a href="stupen-1.html">1&nbsp;ступень</a><a href="stupen-2.html">2&nbsp;ступень</a></div></nav>
+    <nav class="fx__col"><h4>Продукты Танзили</h4><div><a href="sotrudnichestvo.html">Выступления</a><a href="konsultaciya.html">Личная консультация</a><a href="podcast.html">Подкасты</a><a href="knigi.html">Книги</a><a href="https://88dnei.garipova.biz" target="_blank" rel="noopener">Дневник благодарности</a><a href="https://t.me/academy_of_assistantsTG" target="_blank" rel="noopener">Telegram-канал Академии</a></div></nav>
+    <nav class="fx__col fx__credit"><h4>Сайт создан</h4><a href="https://encase-agency.ru" target="_blank" rel="noopener" aria-label="Сайт создан агентством Encase agency"><svg class="fx__encase" viewBox="0 0 1086 362" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="enc-orange" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ff8a3d"/><stop offset=".45" stop-color="#ff6816"/><stop offset="1" stop-color="#e24f00"/></linearGradient><linearGradient id="enc-wine" x1="0" y1="0" x2="1" y2=".6"><stop offset="0" stop-color="#ff5c86"/><stop offset=".5" stop-color="#ec2a5e"/><stop offset="1" stop-color="#c8184a"/></linearGradient><linearGradient id="enc-sheen" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffe1ea" stop-opacity="0"/><stop offset=".55" stop-color="#ffe1ea" stop-opacity=".95"/><stop offset="1" stop-color="#ffe1ea" stop-opacity="0"/></linearGradient><mask id="enc-shape" maskUnits="userSpaceOnUse" x="0" y="0" width="1086" height="362"><image href="assets/img/encase-mask.png" x="0" y="0" width="1086" height="362" preserveAspectRatio="none"/></mask><clipPath id="enc-clip-ink"><rect data-ink x="0" y="0" width="0" height="362"/></clipPath><clipPath id="enc-clip-wine"><rect data-wine x="0" y="0" width="0" height="362"/></clipPath></defs><g mask="url(#enc-shape)"><rect width="1086" height="362" fill="url(#enc-orange)" clip-path="url(#enc-clip-ink)"/><g clip-path="url(#enc-clip-wine)"><rect width="1086" height="362" fill="url(#enc-wine)"/><rect data-sheen x="-190" y="0" width="190" height="362" fill="url(#enc-sheen)" opacity="0" transform="skewX(-18)"/></g></g></svg></a></nav>
+  </div>
+  <div class="fx__legal">
+    <span>ИП Гарипова Т. И.</span>
+    <div class="fx__reg"><span>ИНН 183306514429</span><span>ОГРН 315184000001100</span></div>
+    <div class="fx__docs"><a href="privacy.html">Политика конфиденциальности</a><a href="oferta.html">Договор-оферта</a><a href="pdn.html">Политика персональных данных</a></div>
+  </div>
+  <div class="fx__big fx__big--v3" aria-hidden="true"><p>Танзиля Гарипова</p><img class="fx__ic" src="assets/img/3d/podbor.png" alt="" style="left:1.806vw;top:2.361vw;width:10.208vw;--r:-8deg"><em class="fx__lbl" style="left:4.514vw;top:11.528vw;--r:-8deg">подбор</em><img class="fx__ic" src="assets/img/3d/share.png" alt="" style="left:14.097vw;top:10.278vw;width:9.931vw;--r:6deg"><em class="fx__lbl" style="left:15.764vw;top:16.250vw;--r:6deg">шеринг</em><img class="fx__ic" src="assets/img/3d/obuch.png" alt="" style="left:28.889vw;top:1.042vw;width:9.792vw;--r:-5deg"><em class="fx__lbl" style="left:31.111vw;top:10.139vw;--r:-5deg">обучение</em><img class="fx__ic" src="assets/img/3d/deleg.png" alt="" style="left:41.458vw;top:10.139vw;width:10.208vw;--r:8deg"><em class="fx__lbl" style="left:41.875vw;top:16.250vw;--r:8deg">руководителям</em><img class="fx__ic" src="assets/img/3d/brief.png" alt="" style="left:59.306vw;top:2.014vw;width:9.931vw;--r:-6deg"><em class="fx__lbl" style="left:58.750vw;top:5.625vw;--r:-6deg">персонал</em><img class="fx__ic" src="assets/img/3d/key.png" alt="" style="left:72.083vw;top:11.944vw;width:9.792vw;--r:5deg"><em class="fx__lbl" style="left:77.431vw;top:15.694vw;--r:5deg">франшиза</em><img class="fx__ic" src="assets/img/3d/kons.png" alt="" style="left:89.236vw;top:2.569vw;width:10.069vw;--r:-7deg"><em class="fx__lbl" style="left:88.125vw;top:8.958vw;--r:-7deg">консультации</em></div>
+</footer>
+
+<script src="assets/js/modals.js?v=20261122a"></script>
+<script src="assets/js/main.js?v=20261122c"></script>
+<script src="assets/js/pages.js?v=20261122b"></script>
+</body>
+</html>

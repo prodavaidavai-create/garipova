@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Шеринг ассистентов – Академия Танзили Гариповой</title>
+  <meta name="description" content="Ассистент без найма в штат с оплатой помесячно: онлайн или офлайн, от 30 000 ₽ в месяц, без разового платежа за подбор. Оформление и административные услуги – у нас.">
+  <link rel="icon" href="assets/img/logo.png">
+  <link rel="preload" href="assets/fonts/golos-text-400-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/oswald-700-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/oswald-300-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/fonts/fonts.css?v=2">
+  <link rel="stylesheet" href="assets/css/style.css?v=20261123b">
+  <link rel="stylesheet" href="assets/css/modals.css?v=20261121a">
+  <link rel="stylesheet" href="assets/css/pages.css?v=20261123d">
+</head>
+<body class="is-loading is-inner home page-personal page-sharing">
+
+<!-- ============ ЛОАДЕР (быстрый) ============ -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader__curtain loader__curtain--left"></div>
+  <div class="loader__curtain loader__curtain--right"></div>
+  <div class="loader__brand">
+    <img class="loader__logo" src="assets/img/logo.png" alt="">
+    <div class="loader__cube">
+      <div class="loader__face loader__face--front"><span class="loader__word muted">Танзиля</span> <span class="loader__word">Гарипова</span></div>
+      <div class="loader__face loader__face--top"></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============ ШАПКА ============ -->
+<header class="header" id="header">
+  <div class="header__inner">
+    <a href="index.html" class="header__logo" aria-label="Танзиля Гарипова – на главную"><img src="assets/img/logo.png" alt=""></a>
+    <div class="header__right">
+      <a class="header__social header__social--wa" href="https://wa.me/79688888707" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="assets/img/whatsapp.svg" alt=""></a>
+      <a class="header__social" href="https://t.me/TanzilyaGaripova" target="_blank" rel="noopener" aria-label="Telegram"><img src="assets/img/telegram.svg" alt=""></a>
+      <a class="header__phone" href="tel:+79689488888"><img src="assets/img/call.svg" alt="">+7 968 948 8888</a>
+      <a class="btn btn--wine-grad header__cta" href="#modal-quiz" data-modal="quiz">Подобрать сотрудника</a>
+      <button class="btn btn--ghost-pink header__menu" type="button" id="menuOpen" aria-controls="menu" aria-expanded="false">Меню</button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ МЕНЮ ============ -->
+<div class="menu" id="menu" aria-hidden="true">
+  <div class="menu__top">
+    <a href="index.html" class="header__logo" aria-label="Танзиля Гарипова – на главную"><img src="assets/img/logo.png" alt=""></a>
+    <div class="header__right">
+      <a class="header__social header__social--wa" href="https://wa.me/79688888707" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="assets/img/whatsapp.svg" alt=""></a>
+      <a class="header__social" href="https://t.me/TanzilyaGaripova" target="_blank" rel="noopener" aria-label="Telegram"><img src="assets/img/telegram.svg" alt=""></a>
+      <a class="header__phone" href="tel:+79689488888"><img src="assets/img/call.svg" alt="">+7 968 948 8888</a>
+      <a class="btn btn--wine-grad header__cta" href="#modal-quiz" data-modal="quiz">Подобрать сотрудника</a>
+      <button class="btn btn--ghost-pink header__menu menu__close" type="button" id="menuClose">Закрыть</button>
+      <button class="menu__x" type="button" id="menuX" aria-label="Закрыть меню"><img src="assets/img/close.svg" alt=""></button>
+    </div>
+  </div>
+  <nav class="menu__body" aria-label="Меню сайта">
+    <div class="mm" id="mm">
+      <p class="mm__label">Направления</p>
+      <div class="mm__item is-active">
+        <button class="mm__tab" type="button" aria-expanded="true">Услуги<i class="mm__chev" aria-hidden="true"></i></button>
+        <div class="mm__pane">
+          <p class="mm__label">Услуги</p>
+          <div class="mm__pane-in"><a class="mm__all" href="uslugi.html">Все&nbsp;услуги</a><a href="podbor.html">Подбор ассистентов</a><a href="sharing.html">Шеринг ассистентов</a><a href="podbor-personala.html">Подбор любого персонала</a><a href="trudoustrojstvo.html">Трудоустройство</a></div>
+        </div>
+        <div class="mm__card">
+          <div class="mm__photo" style="background-image:url(assets/img/directions/dir-1.jpg)"><b>Подбор ассистентов</b><span>Найдём бизнес- или личного ассистента под ваши задачи. Типовые позиции – за 3–7 рабочих дней, бесплатная замена 3 месяца.</span></div>
+          <a class="btn btn--ghost-pink" href="#modal-quiz" data-modal="quiz">Подобрать ассистента</a>
+        </div>
+      </div>
+      <div class="mm__item">
+        <button class="mm__tab" type="button" aria-expanded="false">Обучение<i class="mm__chev" aria-hidden="true"></i></button>
+        <div class="mm__pane">
+          <p class="mm__label">Обучение</p>
+          <div class="mm__pane-in"><a href="obuchenie.html">Обучение ассистентов</a><a href="stupen-1.html">1&nbsp;ступень</a><a href="stupen-2.html">2&nbsp;ступень</a><a class="mm__gap" href="kurs.html">Обучение руководителей</a></div>
+        </div>
+        <div class="mm__card">
+          <div class="mm__photo" style="background-image:url(assets/img/directions/dir-2.jpg)"><b>Обучение ассистентов</b><span>Станьте бизнес-ассистентом или прокачайте навыки: 2 ступени онлайн-академии, сертификат. От 25&nbsp;000&nbsp;₽.</span></div>
+          <a class="btn btn--ghost-pink" href="obuchenie.html">Выбрать ступень</a>
+        </div>
+      </div>
+      <div class="mm__item">
+        <button class="mm__tab" type="button" aria-expanded="false">Танзиля<i class="mm__chev" aria-hidden="true"></i></button>
+        <div class="mm__pane">
+          <p class="mm__label">Танзиля</p>
+          <div class="mm__pane-in"><a href="sotrudnichestvo.html">Выступления</a><a href="konsultaciya.html">Личная консультация</a><a href="podcast.html">Подкасты</a><a href="knigi.html">Книги</a><a href="https://88dnei.garipova.biz" target="_blank" rel="noopener">Дневник благодарности</a></div>
+        </div>
+        <div class="mm__card">
+          <div class="mm__photo" style="background-image:url(assets/img/menu/tanzilya-2.jpg)"><b>Танзиля Гарипова</b><span>Основатель группы компаний. Автор книг о работе ассистента и делегировании.</span></div>
+          <a class="btn btn--ghost-pink" href="#modal-consult" data-modal="consult">Записаться на консультацию</a>
+        </div>
+      </div>
+      <div class="mm__item mm__item--link">
+        <a class="mm__tab" href="franshiza.html">Франшиза<i class="mm__arr" aria-hidden="true"></i></a>
+      </div>
+    </div>
+    <div class="menu__foot">
+      <div class="menu__links"><a href="index.html">Главная</a><a href="o-kompanii.html">О компании</a><a href="proekty.html">Наши проекты</a><a href="otzyvy.html">Отзывы</a><a href="voprosy.html">Вопросы и ответы</a><a href="kontakty.html">Контакты</a></div>
+      <a class="btn btn--wine-grad menu__cta" href="#modal-quiz" data-modal="quiz">Подобрать сотрудника</a>
+      <div class="menu__contacts">
+        <a class="header__social header__social--wa" href="https://wa.me/79688888707" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="assets/img/whatsapp.svg" alt=""></a>
+        <a class="header__social" href="https://t.me/TanzilyaGaripova" target="_blank" rel="noopener" aria-label="Telegram"><img src="assets/img/telegram.svg" alt=""></a>
+        <a class="header__phone" href="tel:+79689488888"><img src="assets/img/call.svg" alt="">+7 968 948 8888</a>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<main class="page">
+
+<!-- ============ Хлебные крошки ============ -->
+<nav class="crumbs container" aria-label="Хлебные крошки">
+  <a href="index.html">Главная</a><span aria-hidden="true">›</span><span aria-current="page">Шеринг ассистентов</span>
+</nav>
+
+<main>
+<!-- ============ 01 Первый экран (макет 1011:5991): текст слева, дуга шампань справа ============ -->
+<section class="ahero pshero pshero--share">
+  <div class="ahero__stage pshero__stage">
+        <div class="ahero__text pshero__text">
+      <h1 class="ahero__title">Наш ассистент <br class="only-m">в вашу команду<br><span>с оплатой помесячно</span> <i class="ahero__st">по договору</i></h1>
+      <p class="ahero__lead">Онлайн- или офлайн-ассистент работает на ваши задачи, а оформлен у нас. Вы каждый месяц платите нашей компании за административные услуги, без найма в штат и без разового платежа за подбор.</p>
+      <div class="ahero__actions">
+        <a class="btn btn--white" href="#lead">Подобрать ассистента в шеринг</a>
+        <a class="btn btn--outline-white" href="#ways">Сравнить варианты</a>
+      </div>
+    </div>
+    <div class="ahero__art pshero__art shero-m" aria-hidden="true"><img class="shero-m__all" src="assets/img/sharing/hero-m-art.webp" alt="" width="718" height="416"></div>
+    <div class="ahero__fade" aria-hidden="true"></div>
+  </div>
+  <div class="shero-art" aria-hidden="true"><img class="shero-art__all" src="assets/img/share/hero-d.webp" alt="" fetchpriority="high" width="1331" height="727"></div>
+  <div class="ahero__nums">
+    <div><b>от 30 000 ₽</b>в месяц – ассистент<br>онлайн или офлайн</div>
+    <div><b>0 ₽</b>разового платежа<br>за подбор</div>
+    <div><b>8000+</b>подобранных<br>сотрудников</div>
+    <div><b>с 2015 года</b>подбираем и обучаем<br>ассистентов</div>
+    <div><b>17 стран</b>где&nbsp;работают наши<br>кандидаты</div>
+  </div>
+</section>
+<section class="section section--dark pclients" id="clients">
+  <div class="container">
+    <div class="sec-head sec-head--dark">
+      <h2 class="sec-title">Нам доверяют подбор ассистентов</h2>
+      <div class="sec-head__row">
+        <p class="sec-head__label">Клиенты</p>
+        <p class="sec-head__aside">Компании, которым мы подобрали сотрудников.</p>
+      </div>
+    </div>
+    <div class="pclients__grid">
+      <span class="pclients__item"><img src="assets/img/logos/fig/1-grebenuk.png" alt="Grebenuk Resulting" width="126" height="48"></span>
+      <span class="pclients__item"><img src="assets/img/logos/fig/2-delovaya.png" alt="Деловая среда" width="126" height="48"></span>
+      <span class="pclients__item"><img src="assets/img/logos/fig/3-skolkovo.png" alt="Сколково" width="118" height="48"></span>
+      <span class="pclients__item"><img src="assets/img/logos/fig/4-mercedes.png" alt="Mercedes-Benz" width="73" height="48"></span>
+      <span class="pclients__item"><img src="assets/img/logos/fig/5-moscow.png" alt="Правительство Москвы" width="119" height="44"></span>
+      <span class="pclients__item"><img src="assets/img/logos/fig/6-ntv.png" alt="НТВ" width="44" height="48"></span>
+      <span class="pclients__item"><img src="assets/img/logos/clients/01-vk.svg" alt="ВКонтакте"></span>
+      <span class="pclients__item"><img src="assets/img/logos/clients/02-mailru.svg" alt="Mail.ru"></span>
+      <span class="pclients__item"><img src="assets/img/logos/clients/03-roscosmos.svg" alt="Роскосмос"></span>
+      <span class="pclients__item"><img src="assets/img/logos/clients/04-sber.svg" alt="Сбербанк"></span>
+      <span class="pclients__item"><img class="is-sm" src="assets/img/logos/clients/05-vtb.svg" alt="ВТБ"></span>
+      <span class="pclients__item"><img src="assets/img/logos/clients/06-synergy.png" alt="Университет «Синергия»"></span>
+      <span class="pclients__item"><img src="assets/img/logos/clients/07-gazprom.svg" alt="Газпром"></span>
+      <span class="pclients__item"><img src="assets/img/logos/clients/08-rosneft.svg" alt="Роснефть"></span>
+      <span class="pclients__item"><img src="assets/img/logos/clients/09-tashir.png" alt="Ташир"></span>
+      <span class="pclients__item"><img src="assets/img/logos/clients/10-lukoil.svg" alt="Лукойл"></span>
+      <span class="pclients__item"><img src="assets/img/logos/clients/11-rosatom.svg" alt="Росатом"></span>
+      <span class="pclients__item"><img src="assets/img/logos/clients/12-rzd.svg" alt="РЖД"></span>
+      <span class="pclients__item"><img src="assets/img/logos/clients/13-mosenergo.svg" alt="Мосэнерго"></span>
+      <span class="pclients__item"><img src="assets/img/logos/clients/14-yandex.svg" alt="Яндекс"></span>
+      <span class="pclients__item"><img src="assets/img/logos/clients/15-mvideo.svg" alt="М.Видео"></span>
+      <span class="pclients__item"><img src="assets/img/logos/clients/16-x5.svg" alt="X5 Group"></span>
+      <span class="pclients__item"><img src="assets/img/logos/clients/17-rmi.png" alt="Россия – моя история"></span>
+      <span class="pclients__item"><img src="assets/img/logos/clients/18-wb.svg" alt="Wildberries"></span>
+    </div>
+  </div>
+</section>
+<!-- ============ Какие ассистенты работают в шеринге (макет 1346:9369, моб. 1372:3651) ============ -->
+<section class="section pbento">
+  <div class="container">
+    <div class="pbento__head"><h2 class="sec-title">Какие ассистенты<br>работают в&nbsp;шеринге <span class="tsticker" style="--r:-4deg">шеринг</span></h2><p>Один ассистент&nbsp;– несколько руководителей. Подберём формат под&nbsp;ваши задачи.</p></div>
+    <ol class="pbento__grid">
+      <li class="pbento__big reveal"><img src="assets/img/gen/share1-v2.webp" alt="Бизнес-ассистент" loading="lazy"><div class="pbento__cap"><span class="tsticker" style="--r:-4deg">чаще всего</span><h3>Бизнес-ассистент</h3><p>Календарь, встречи, документы, контроль поручений команды</p></div></li>
+      <li class="pbento__row reveal"><img src="assets/img/gen/share2-v2.webp" alt="Личный ассистент" loading="lazy"><div class="pbento__txt"><span class="num">(02)</span><h3>Личный ассистент</h3><p>Быт, семья, поездки, покупки, личные поручения</p></div></li><li class="pbento__row reveal"><img src="assets/img/gen/share3-v2.webp" alt="Онлайн-ассистент" loading="lazy"><div class="pbento__txt"><span class="num">(03)</span><h3>Онлайн-ассистент</h3><p>Работает удалённо из&nbsp;любой страны, в&nbsp;вашем часовом поясе</p></div></li><li class="pbento__row reveal"><img src="assets/img/gen/share4-v2.webp" alt="Офлайн-ассистент" loading="lazy"><div class="pbento__txt"><span class="num">(04)</span><h3>Офлайн-ассистент</h3><p>Работает в&nbsp;вашем офисе, ездит на&nbsp;встречи и&nbsp;по&nbsp;поручениям</p></div></li>
+    </ol>
+  </div>
+</section>
+<!-- ============ Шеринг подойдёт, если – колода (макет 1023:3414) ============ -->
+<section class="deck deck--4" id="process">
+  <div class="deck__sticky">
+  <div class="container deck__head">
+    <h2 class="deck__title">Шеринг подойдёт, если</h2>
+  </div>
+  <div class="deck__stage">
+    <div class="dcardx-slot"><article class="dcardx dcardx--wine" style="--r: 5.33deg"><h3>Ассистент нужен сейчас</h3><p>А оплатить подбор сразу нет возможности.</p><img class="dcardx__3d dcardx__3d--r" style="--ir:-8deg" src="assets/img/3d/wallet-fast.png" alt="" aria-hidden="true" loading="lazy"></article></div>
+    <div class="dcardx-slot"><article class="dcardx dcardx--white" style="--r: 0deg"><h3>Не хотите брать в штат</h3><p>И заниматься кадровыми вопросами.</p><img class="dcardx__3d dcardx__3d--l" style="--ir:8deg" src="assets/img/3d/no-staff.png" alt="" aria-hidden="true" loading="lazy"></article></div>
+    <div class="dcardx-slot"><article class="dcardx dcardx--wine" style="--r: -8.49deg"><h3>Удобнее платить помесячно</h3><p>Понятная сумма каждый месяц, а не разовый платёж.</p><img class="dcardx__3d dcardx__3d--r" style="--ir:-8deg" src="assets/img/3d/monthly.png" alt="" aria-hidden="true" loading="lazy"></article></div>
+    <div class="dcardx-slot"><article class="dcardx dcardx--white" style="--r: 0deg"><h3>Только пробуете</h3><p>Задачи есть, но вы впервые работаете с ассистентом.</p><img class="dcardx__3d dcardx__3d--l" style="--ir:8deg" src="assets/img/3d/sprout.png" alt="" aria-hidden="true" loading="lazy"></article></div>
+  </div>
+  </div>
+</section>
+<!-- ============ Три способа найти ассистента (макет 1023:3451): карточки как «Два пути» ============ -->
+<section class="section section--light career career--v2 pbizhome pways" id="ways">
+  <div class="container">
+    <div class="sec-head">
+      <h2 class="sec-title">Три способа <span class="tsticker" style="--r:-5deg">найти ассистента</span></h2>
+      <div class="sec-head__row">
+        <p class="sec-head__label">Выберите удобный формат</p>
+        <p class="sec-head__aside">Подбор с разовым платежом, шеринг с оплатой помесячно или объявление в чате ассистентов.</p>
+      </div>
+    </div>
+    <div class="career__grid pways__grid">
+      <div class="ccard ccard--champ reveal">
+        <div class="ccard__head"><h3>Стандартный подбор</h3><div class="ccard__art"><span class="cst cst--w" style="left:40px;top:110px;--r:-5deg">1 зарплата</span><img src="assets/img/3d/salary-envelope.png" alt="" style="--r:0deg"><span class="cst cst--b" style="left:58px;top:158px;--r:-14deg">разово</span></div></div>
+        <ul><li>✓ Портрет, поиск, тестовое и проверки</li><li>✓ Финалисты – вы выбираете сами</li><li>✓ Сопровождение в первые недели</li><li>✓ Гарантия замены 3 месяца по договору</li></ul>
+      </div>
+      <div class="ccard ccard--wine reveal">
+        <div class="ccard__head"><h3>Шеринг ассистента</h3><div class="ccard__art"><span class="cst cst--w" style="left:40px;top:110px;--r:-5deg">от 30 000 ₽</span><img src="assets/img/3d/sharing-badge.png" alt="" style="--r:0deg"><span class="cst cst--b" style="left:58px;top:158px;--r:-14deg">в месяц</span></div></div>
+        <ul><li>✓ Онлайн- или офлайн-ассистент</li><li>✓ Без найма в штат</li><li>✓ Один платёж в месяц по договору</li><li>✓ 4 уровня: от 30 000 до 120 000+ ₽</li><li>✓ Персональный менеджер</li></ul>
+      </div>
+      <div class="ccard ccard--champ reveal">
+        <div class="ccard__head"><h3>Объявление в чате</h3><div class="ccard__art"><span class="cst cst--w" style="left:40px;top:110px;--r:-5deg">1 500 ₽</span><img src="assets/img/3d/chat-megaphone.png" alt="" style="--r:0deg"><span class="cst cst--b" style="left:58px;top:158px;--r:-14deg">бюджетно</span></div></div>
+        <ul><li>✓ Публикация вакансии в чате</li><li>✓ Отклики приходят вам напрямую</li><li>✓ Отбор и собеседования – на вашей стороне</li><li>✓ Самый бюджетный вариант</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ============ Стоимость шеринга – кубик из 4 граней (макеты 1034:3364 / 1028:3338) ============ -->
+<section class="scene scene--pricing scene--choose scene--four" id="choose">
+  <div class="scene__sticky">
+    <div class="scene__stage">
+      <div class="scene__line scene__line--c"></div>
+      <div class="scene__line scene__line--l"></div>
+      <div class="scene__line scene__line--r"></div>
+      <p class="scene__title scene__title--l">Стоимость</p>
+      <p class="scene__title scene__title--r">шеринга</p>
+      <div class="tariffs">
+        <article class="tariff">
+  <div class="tariff__top">
+    <div class="tariff__tags"><span class="tariff__tag">Базовый</span></div>
+    <h3 class="tariff__price">30–50 тыс.&nbsp;₽</h3>
+    <p class="tariff__sub">Ассистент на базовые задачи: календарь, документы, поручения.</p><img class="tariff__3d" src="assets/img/3d/tier-1.png" alt="" aria-hidden="true">
+  </div>
+  <div class="tariff__bottom">
+    <ul><li>✓ Календарь, встречи, напоминания</li><li>✓ Документы и простые отчёты</li><li>✓ Личные и рабочие поручения</li></ul>
+    <div class="tariff__btns">
+      <a class="btn btn--wine-grad" href="#lead">Взять ассистента</a>
+      <a class="btn btn--outline-dark" href="#modal-shcalc" data-modal="shcalc">Узнать точную стоимость</a>
+    </div>
+  </div>
+</article>
+        <article class="tariff tariff--champ">
+  <div class="tariff__top">
+    <div class="tariff__tags"><span class="tariff__tag">Опытный</span></div>
+    <h3 class="tariff__price">50–70 тыс.&nbsp;₽</h3>
+    <p class="tariff__sub">Опытный бизнес- или личный ассистент.</p><img class="tariff__3d" src="assets/img/3d/tier-2.png" alt="" aria-hidden="true">
+  </div>
+  <div class="tariff__bottom">
+    <ul><li>✓ Всё&nbsp;из «Базового»</li><li>✓ Бизнес- и личные задачи</li><li>✓ Работа с подрядчиками</li><li>✓ Поездки и бронирования</li></ul>
+    <div class="tariff__btns">
+      <a class="btn btn--wine-grad" href="#lead">Взять ассистента</a>
+      <a class="btn btn--outline-dark" href="#modal-shcalc" data-modal="shcalc">Узнать точную стоимость</a>
+    </div>
+  </div>
+</article>
+        <article class="tariff">
+  <div class="tariff__top">
+    <div class="tariff__tags"><span class="tariff__tag">Менеджер</span></div>
+    <h3 class="tariff__price">70–120 тыс.&nbsp;₽</h3>
+    <p class="tariff__sub">Ассистент-менеджер: проекты, CRM, подрядчики.</p><img class="tariff__3d" src="assets/img/3d/tier-3.png" alt="" aria-hidden="true">
+  </div>
+  <div class="tariff__bottom">
+    <ul><li>✓ Всё&nbsp;из «Опытного»</li><li>✓ Ведение проектов и CRM</li><li>✓ Контроль поручений команды</li><li>✓ Отчёты для руководителя</li></ul>
+    <div class="tariff__btns">
+      <a class="btn btn--wine-grad" href="#lead">Взять ассистента</a>
+      <a class="btn btn--outline-dark" href="#modal-shcalc" data-modal="shcalc">Узнать точную стоимость</a>
+    </div>
+  </div>
+</article>
+        <article class="tariff">
+  <div class="tariff__top">
+    <div class="tariff__tags"><span class="tariff__tag">Топ-уровень</span></div>
+    <h3 class="tariff__price">120+ тыс.&nbsp;₽</h3>
+    <p class="tariff__sub">Ассистент топ-уровня для собственника и команды.</p><img class="tariff__3d" src="assets/img/3d/tier-4.png" alt="" aria-hidden="true">
+  </div>
+  <div class="tariff__bottom">
+    <ul><li>✓ Всё&nbsp;из «Менеджера»</li><li>✓ Правая рука собственника</li><li>✓ Стратегические задачи и команда</li><li>✓ Персональный менеджер 24/7</li></ul>
+    <div class="tariff__btns">
+      <a class="btn btn--wine-grad" href="#lead">Взять ассистента</a>
+      <a class="btn btn--outline-dark" href="#modal-shcalc" data-modal="shcalc">Узнать точную стоимость</a>
+    </div>
+  </div>
+</article>
+      </div>
+      <p class="scene__note scene__note--pricing">Шеринг – по договору · один платёж в месяц · без найма в штат и разового платежа</p>
+    </div>
+  </div>
+</section>
+<!-- ============ Что входит в шеринг (макет 1028:3452) ============ -->
+<section class="section section--light guarantee pget">
+  <div class="container guarantee__inner">
+    <div class="guarantee__left">
+      <p class="sec-head__label sec-head__label--wine">Без найма в штат.</p>
+      <h2 class="guarantee__title">Что входит<br><span>в шеринг ассистента</span></h2>
+      <p class="guarantee__lead">Вы получаете ассистента и не занимаетесь наймом и оформлением: подбор, оформление и сопровождение – на нашей стороне.</p>
+    </div>
+    <div class="guarantee__cards">
+      <div class="gcard reveal"><div class="gcard__media"><img src="assets/img/podbor/get-portret.jpg" alt="" loading="lazy"></div><div class="gcard__body"><h3>Подбор ассистента</h3><div class="gcard__row"><p>без разового платежа – под ваши задачи и формат</p><span class="hand">шаг 1</span></div></div></div>
+      <div class="gcard reveal"><div class="gcard__media"><img src="assets/img/sharing/get-oformlenie.jpg" alt="" loading="lazy"></div><div class="gcard__body"><h3>Оформление у нас</h3><div class="gcard__row"><p>ассистент не в вашем штате – без кадровых хлопот</p><span class="hand">шаг 2</span></div></div></div>
+      <div class="gcard reveal"><div class="gcard__media"><img src="assets/img/podbor/get-zamena.jpg" alt="" loading="lazy"></div><div class="gcard__body"><h3>Административные услуги</h3><div class="gcard__row"><p>каждый месяц – по договору</p><span class="hand">шаг 3</span></div></div></div>
+      <div class="gcard reveal"><div class="gcard__media"><img src="assets/img/podbor/get-soprovozhdenie.jpg" alt="" loading="lazy"></div><div class="gcard__body"><h3>Сопровождение</h3><div class="gcard__row"><p>помогаем в первые недели работы</p><span class="hand">шаг 4</span></div></div></div>
+      <div class="gcard reveal"><div class="gcard__media"><img src="assets/img/podbor/get-menedzher.jpg" alt="" loading="lazy"></div><div class="gcard__body"><h3>Персональный менеджер</h3><div class="gcard__row"><p>и поддержка 24/7</p><span class="hand">шаг 5</span></div></div></div>
+      <div class="gcard reveal"><div class="gcard__media"><img src="assets/img/sharing/get-platezh.jpg" alt="" loading="lazy"></div><div class="gcard__body"><h3>Один платёж в месяц</h3><div class="gcard__row"><p>понятная сумма без скрытых доплат</p><span class="hand">шаг 6</span></div></div></div>
+    </div>
+  </div>
+</section>
+<!-- ============ Что передать ассистенту в первый месяц (макет 1026:3328) ============ -->
+<section class="section section--light clist clist--contacts pcheck pfirst">
+  <div class="container clist__grid">
+    <div class="clist__head">
+      <h2 class="sec-title">Что передать ассистенту <br>в первый месяц</h2>
+      <p>И что пока лучше оставить себе, чтобы старт прошёл спокойно.</p>
+    </div>
+    <div class="clist__list">
+      <div class="clist__item reveal"><img class="clist__ic" src="assets/img/3d/biz-planner.png" alt="" aria-hidden="true" loading="lazy"><h3>Календарь и встречи</h3><p>Встречи, напоминания, бронирования и поездки</p></div>
+      <div class="clist__item reveal"><img class="clist__ic" src="assets/img/3d/brief.png" alt="" aria-hidden="true" loading="lazy"><h3>Документы и отчёты</h3><p>Таблицы, простые отчёты, CRM и клиентская база</p></div>
+      <div class="clist__item reveal"><img class="clist__ic" src="assets/img/3d/personal-bag.png" alt="" aria-hidden="true" loading="lazy"><h3>Подрядчики и поручения</h3><p>Поиск подрядчиков, сбор предложений, личные поручения</p></div>
+      <div class="clist__item reveal"><img class="clist__ic" src="assets/img/3d/safe.png" alt="" aria-hidden="true" loading="lazy"><h3>Пока не передавать</h3><p>Управление командой, платежи без регламента, юридические и стратегические решения</p></div>
+    </div>
+  </div>
+</section>
+<!-- ============ Как мы проверяем (макет 1026:3362): фото + аккордеон как «6 шагов» на главной ============ -->
+<section class="steps psteps" id="steps">
+  <div class="steps__media" id="stepsMedia" aria-hidden="true"><img src="assets/img/steps/step-1.jpg" alt="" class="is-active"><img src="assets/img/steps/step-2.jpg" alt=""><img src="assets/img/steps/step-3.jpg" alt=""><img src="assets/img/steps/step-4.jpg" alt=""></div>
+  <div class="steps__body">
+    <div class="steps__top">
+      <div class="steps__thumb" id="stepsThumb" aria-hidden="true"><img src="assets/img/steps/step-1.jpg" alt=""><img src="assets/img/steps/step-2.jpg" alt="" class="is-active"><img src="assets/img/steps/step-3.jpg" alt=""><img src="assets/img/steps/step-4.jpg" alt=""></div>
+    </div>
+    <h2 class="steps__title">Как мы проверяем<br>каждого кандидата</h2>
+    <div class="steps__list" id="stepsList">
+      <div class="step is-open"><i class="step__bar"></i><button class="step__head" type="button"><span class="num">(01)</span><span class="step__name">Диагностика</span><span class="step__tag">(Интервью)</span></button>
+        <div class="step__body"><div class="step__inner"><p>Интервью по профилю должности: опыт, мотивация, стиль работы. Понимаем, подходит ли человек под ваши задачи.</p><p class="step__res">Результат: портрет кандидата под ваши задачи</p></div></div></div>
+      <div class="step"><i class="step__bar"></i><button class="step__head" type="button"><span class="num">(02)</span><span class="step__name">Hard skills</span><span class="step__tag">(Тестовое)</span></button>
+        <div class="step__body"><div class="step__inner"><p>Тестовое задание по профилю должности – на задачах, похожих на ваши.</p><p class="step__res">Результат: проверенные рабочие навыки</p></div></div></div>
+      <div class="step"><i class="step__bar"></i><button class="step__head" type="button"><span class="num">(03)</span><span class="step__name">Soft skills</span><span class="step__tag">(Характер)</span></button>
+        <div class="step__body"><div class="step__inner"><p>Ответственность, такт, стрессоустойчивость, внимание к деталям.</p><p class="step__res">Результат: человек, с которым комфортно работать</p></div></div></div>
+      <div class="step"><i class="step__bar"></i><button class="step__head" type="button"><span class="num">(04)</span><span class="step__name">Проверки</span><span class="step__tag">(Рекомендации и СБ)</span></button>
+        <div class="step__body"><div class="step__inner"><p>Рекомендации с прошлых мест, финпроверка, при необходимости – служба безопасности.</p><p class="step__res">Результат: 2–3 проверенных финалиста</p></div></div></div>
+    </div>
+  </div>
+</section>
+<section class="section section--dark leadform leadform--final" id="lead">
+  <img class="leadform__circle" src="assets/img/circle-small.svg" alt="">
+  <div class="container leadform__inner">
+    <div class="leadform__left">
+      <h2 class="sec-title">Подберём ассистента в шеринг. Расскажите о задачах</h2>
+      <ol class="form__steps"><li><span class="num">(01)</span>Свяжемся в рабочее время: Пн–Пт, 9:00–18:00</li><li><span class="num">(02)</span>Уточним задачи и формат: онлайн или офлайн</li><li><span class="num">(03)</span>Назовём уровень ассистента и сумму в месяц</li></ol>
+      <div class="contact-card">
+        <img class="contact-card__ava" src="assets/img/contact-ava.jpg" alt="">
+        <div><b>Танзиля Гарипова</b><a href="tel:+79689488888"><span class="flag"></span>+7 968 948 8888</a></div>
+        <i></i><span>Пн–Пт<br>9:00–18:00</span>
+      </div>
+    </div>
+    <form class="form" novalidate>
+      <input class="form__input" type="text" name="name" placeholder="Имя" autocomplete="name">
+      <label class="form__phone"><span class="flag"></span><span>+7</span><input type="tel" name="phone" placeholder="Телефон" autocomplete="tel-national"></label>
+      <div class="form__via"><span>Формат шеринга:</span>
+        <div class="seg seg--text"><button type="button" class="is-active">Онлайн</button><button type="button">Офлайн</button></div>
+      </div>
+      <div class="form__via"><span>Как удобнее связаться?</span>
+        <div class="seg"><button type="button" class="is-active"><img src="assets/img/whatsapp.svg" alt="">Whats App</button><button type="button"><img src="assets/img/telegram.svg" alt="">Telegram</button><button type="button">Звонок</button></div>
+      </div>
+      <button class="btn btn--white form__submit" type="submit">Подобрать в шеринг</button>
+      <label class="consent"><input type="checkbox" name="consent"><span class="consent__box" aria-hidden="true"></span><span class="form__policy">Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных</span></label>
+    </form>
+  </div>
+</section>
+<section class="section section--dark faq qsec" id="faq" data-qa>
+  <div class="qsec__grid">
+    <div class="qsec__main">
+      <h2 class="sec-title">Частые вопросы</h2>
+      <div class="faq__list">
+        <details class="qa" open><summary><span class="qa__num">01</span><span class="qa__q">Чем шеринг отличается от обычного подбора?</span><svg class="qa__arrow" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M4 4L28 28M28 8V28H8" stroke="currentColor" stroke-width="3"/></svg></summary><p>При подборе вы один раз платите за подбор, одну зарплату ассистента, и получаете гарантию замены 3 месяца, ассистент работает у вас. В шеринге разового платежа нет: вы каждый месяц платите нашей компании, а мы оказываем административные услуги.</p></details>
+        <details class="qa"><summary><span class="qa__num">02</span><span class="qa__q">Сколько стоит шеринг в месяц?</span><svg class="qa__arrow" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M4 4L28 28M28 8V28H8" stroke="currentColor" stroke-width="3"/></svg></summary><p>От 30 000 ₽ в месяц. Есть четыре уровня: базовый – 30–50 тыс.&nbsp;₽, опытный – 50–70 тыс.&nbsp;₽, ассистент-менеджер – 70–120 тыс.&nbsp;₽, топ-уровень – от 120 тыс.&nbsp;₽. Точную сумму назовём после брифа.</p></details>
+        <details class="qa"><summary><span class="qa__num">03</span><span class="qa__q">Ассистент работает онлайн или в офисе?</span><svg class="qa__arrow" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M4 4L28 28M28 8V28H8" stroke="currentColor" stroke-width="3"/></svg></summary><p>Как вам удобнее. Онлайн-ассистент работает удалённо из любой страны в вашем часовом поясе, офлайн-ассистент – в вашем офисе, ездит на встречи и по поручениям.</p></details>
+        <details class="qa"><summary><span class="qa__num">04</span><span class="qa__q">Кто оформляет ассистента?</span><svg class="qa__arrow" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M4 4L28 28M28 8V28H8" stroke="currentColor" stroke-width="3"/></svg></summary><p>Мы. Ассистент не в вашем штате, кадровые вопросы и оформление остаются на нашей стороне, а вы получаете ассистента и ставите ему задачи.</p></details>
+        <details class="qa"><summary><span class="qa__num">05</span><span class="qa__q">Как проходит оплата?</span><svg class="qa__arrow" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M4 4L28 28M28 8V28H8" stroke="currentColor" stroke-width="3"/></svg></summary><p>Один платёж в месяц по договору – за административные услуги. Сумма понятная и без скрытых доплат, разового платежа за подбор нет.</p></details>
+        <details class="qa"><summary><span class="qa__num">06</span><span class="qa__q">Как вы проверяете кандидатов?</span><svg class="qa__arrow" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M4 4L28 28M28 8V28H8" stroke="currentColor" stroke-width="3"/></svg></summary><p>Проверяем опыт, рекомендации, мотивацию, ценности и софт-скиллы, даём тестовое задание. При необходимости подключаем службу безопасности.</p></details>
+        <details class="qa"><summary><span class="qa__num">07</span><span class="qa__q">Нет бюджета ни на подбор, ни на шеринг – что делать?</span><svg class="qa__arrow" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M4 4L28 28M28 8V28H8" stroke="currentColor" stroke-width="3"/></svg></summary><p>Разместим вашу вакансию в чате ассистентов Академии за 1 500 ₽, кандидаты откликнутся вам напрямую, а отбор и собеседования вы проведёте сами.</p></details>
+        <details class="qa"><summary><span class="qa__num">08</span><span class="qa__q">Работаете по договору?</span><svg class="qa__arrow" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M4 4L28 28M28 8V28H8" stroke="currentColor" stroke-width="3"/></svg></summary><p>Да, работаем по договору, в нём прописаны услуги и ежемесячный платёж. Пример договора можно посмотреть до начала работы.</p></details>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section section--dark leadform leadform--final" id="final" data-as-modal="shcalc">
+  <img class="leadform__circle" src="assets/img/circle-small.svg" alt="">
+  <div class="container leadform__inner">
+    <div class="leadform__left">
+      <h2 class="sec-title">Получите расчёт шеринга под ваши задачи</h2>
+      
+      <ol class="form__steps"><li><span class="num">(01)</span>Свяжемся в рабочее время: Пн–Пт, 9:00–18:00</li><li><span class="num">(02)</span>Уточним задачи и формат работы</li><li><span class="num">(03)</span>Пришлём расчёт ежемесячного платежа</li></ol>
+      <div class="contact-card">
+        <img class="contact-card__ava" src="assets/img/contact-ava.jpg" alt="">
+        <div><b>Танзиля Гарипова</b><a href="tel:+79689488888"><span class="flag"></span>+7 968 948 8888</a></div>
+        <i></i><span>Пн–Пт<br>9:00–18:00</span>
+      </div>
+    </div>
+    <form class="form" novalidate>
+      <input class="form__input" type="text" name="name" placeholder="Имя" autocomplete="name">
+      <label class="form__phone"><span class="flag"></span><span>+7</span><input type="tel" name="phone" placeholder="Телефон" autocomplete="tel-national"></label>
+      <div class="form__via"><span>Как удобнее связаться?</span>
+        <div class="seg"><button type="button" class="is-active"><img src="assets/img/whatsapp.svg" alt="">Whats App</button><button type="button"><img src="assets/img/telegram.svg" alt="">Telegram</button><button type="button">Звонок</button></div>
+      </div>
+      <button class="btn btn--white form__submit" type="submit">Получить расчёт</button>
+      <label class="consent"><input type="checkbox" name="consent"><span class="consent__box" aria-hidden="true"></span><span class="form__policy">Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных</span></label>
+    </form>
+  </div>
+</section>
+</main>
+
+
+<!-- ============ Подвал ============ -->
+<footer class="fx">
+  <div class="fx__top">
+    <a class="fx__brand" href="index.html" aria-label="Группа компаний Танзили Гариповой – на главную"><img src="assets/img/logo-group.png" alt="" width="42" height="45"><span>Группа Компаний<br>Танзили Гариповой</span></a>
+    <nav class="fx__col"><h4>Меню</h4><div><a href="index.html">Главная</a><a href="o-kompanii.html">О компании</a><a href="proekty.html">Наши проекты</a><a href="otzyvy.html">Отзывы</a><a href="voprosy.html">Вопросы и ответы</a><a href="kontakty.html">Контакты</a></div></nav>
+    <nav class="fx__col"><h4><a href="uslugi.html">Услуги</a></h4><div><a href="podbor.html">Подбор ассистентов</a><a href="sharing.html">Шеринг ассистентов</a><a href="podbor-personala.html">Подбор любого персонала</a><a href="trudoustrojstvo.html">Трудоустройство</a></div></nav>
+    <nav class="fx__col"><h4>Обучение</h4><div><a href="kurs.html">Обучение руководителей</a><a href="obuchenie.html">Обучение ассистентов</a><a href="stupen-1.html">1&nbsp;ступень</a><a href="stupen-2.html">2&nbsp;ступень</a></div></nav>
+    <nav class="fx__col"><h4>Продукты Танзили</h4><div><a href="sotrudnichestvo.html">Выступления</a><a href="konsultaciya.html">Личная консультация</a><a href="podcast.html">Подкасты</a><a href="knigi.html">Книги</a><a href="https://88dnei.garipova.biz" target="_blank" rel="noopener">Дневник благодарности</a><a href="https://t.me/academy_of_assistantsTG" target="_blank" rel="noopener">Telegram-канал Академии</a></div></nav>
+    <nav class="fx__col fx__credit"><h4>Сайт создан</h4><a href="https://encase-agency.ru" target="_blank" rel="noopener" aria-label="Сайт создан агентством Encase agency"><svg class="fx__encase" viewBox="0 0 1086 362" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="enc-orange" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ff8a3d"/><stop offset=".45" stop-color="#ff6816"/><stop offset="1" stop-color="#e24f00"/></linearGradient><linearGradient id="enc-wine" x1="0" y1="0" x2="1" y2=".6"><stop offset="0" stop-color="#ff5c86"/><stop offset=".5" stop-color="#ec2a5e"/><stop offset="1" stop-color="#c8184a"/></linearGradient><linearGradient id="enc-sheen" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffe1ea" stop-opacity="0"/><stop offset=".55" stop-color="#ffe1ea" stop-opacity=".95"/><stop offset="1" stop-color="#ffe1ea" stop-opacity="0"/></linearGradient><mask id="enc-shape" maskUnits="userSpaceOnUse" x="0" y="0" width="1086" height="362"><image href="assets/img/encase-mask.png" x="0" y="0" width="1086" height="362" preserveAspectRatio="none"/></mask><clipPath id="enc-clip-ink"><rect data-ink x="0" y="0" width="0" height="362"/></clipPath><clipPath id="enc-clip-wine"><rect data-wine x="0" y="0" width="0" height="362"/></clipPath></defs><g mask="url(#enc-shape)"><rect width="1086" height="362" fill="url(#enc-orange)" clip-path="url(#enc-clip-ink)"/><g clip-path="url(#enc-clip-wine)"><rect width="1086" height="362" fill="url(#enc-wine)"/><rect data-sheen x="-190" y="0" width="190" height="362" fill="url(#enc-sheen)" opacity="0" transform="skewX(-18)"/></g></g></svg></a></nav>
+  </div>
+  <div class="fx__legal">
+    <span>ИП Гарипова Т. И.</span>
+    <div class="fx__reg"><span>ИНН 183306514429</span><span>ОГРН 315184000001100</span></div>
+    <div class="fx__docs"><a href="privacy.html">Политика конфиденциальности</a><a href="oferta.html">Договор-оферта</a><a href="pdn.html">Политика персональных данных</a></div>
+  </div>
+  <div class="fx__big fx__big--v3" aria-hidden="true"><p>Танзиля Гарипова</p><img class="fx__ic" src="assets/img/3d/podbor.png" alt="" style="left:1.806vw;top:2.361vw;width:10.208vw;--r:-8deg"><em class="fx__lbl" style="left:4.514vw;top:11.528vw;--r:-8deg">подбор</em><img class="fx__ic" src="assets/img/3d/share.png" alt="" style="left:14.097vw;top:10.278vw;width:9.931vw;--r:6deg"><em class="fx__lbl" style="left:15.764vw;top:16.250vw;--r:6deg">шеринг</em><img class="fx__ic" src="assets/img/3d/obuch.png" alt="" style="left:28.889vw;top:1.042vw;width:9.792vw;--r:-5deg"><em class="fx__lbl" style="left:31.111vw;top:10.139vw;--r:-5deg">обучение</em><img class="fx__ic" src="assets/img/3d/deleg.png" alt="" style="left:41.458vw;top:10.139vw;width:10.208vw;--r:8deg"><em class="fx__lbl" style="left:41.875vw;top:16.250vw;--r:8deg">руководителям</em><img class="fx__ic" src="assets/img/3d/brief.png" alt="" style="left:59.306vw;top:2.014vw;width:9.931vw;--r:-6deg"><em class="fx__lbl" style="left:58.750vw;top:5.625vw;--r:-6deg">персонал</em><img class="fx__ic" src="assets/img/3d/key.png" alt="" style="left:72.083vw;top:11.944vw;width:9.792vw;--r:5deg"><em class="fx__lbl" style="left:77.431vw;top:15.694vw;--r:5deg">франшиза</em><img class="fx__ic" src="assets/img/3d/kons.png" alt="" style="left:89.236vw;top:2.569vw;width:10.069vw;--r:-7deg"><em class="fx__lbl" style="left:88.125vw;top:8.958vw;--r:-7deg">консультации</em></div>
+</footer>
+
+<script src="assets/js/modals.js?v=20261122a"></script>
+<script src="assets/js/main.js?v=20261122c"></script>
+<script src="assets/js/pages.js?v=20261122b"></script>
+</body>
+</html>

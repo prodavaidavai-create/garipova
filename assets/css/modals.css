@@ -1,0 +1,138 @@
+/* ============ Всплывающие окна (макет 858:2567): тёмный экран на всю высоту, крестик справа сверху ============ */
+html.mdl-lock { overflow: hidden; }
+.mdl { position: fixed; inset: 0; z-index: 200; overflow-y: auto; overscroll-behavior: contain; color: var(--c-light);
+  background: linear-gradient(160deg, #2a0510 0%, var(--c-bg) 70%); opacity: 0; transition: opacity .35s ease; }
+.mdl[hidden] { display: none; }
+.mdl.is-open { opacity: 1; }
+.mdl__x { position: fixed; top: 34px; right: 40px; z-index: 2; width: 44px; height: 44px; display: grid; place-items: center; cursor: pointer; transition: opacity .25s ease, transform .25s ease; }
+.mdl__x img { width: 16px; height: 16px; }
+.mdl__x:hover { opacity: .7; transform: rotate(90deg); }
+.mdl__body { min-height: 100%; display: flex; align-items: center; padding: 96px 0; }
+.mdl__body > * { width: 100%; transform: translateY(24px); transition: transform .45s cubic-bezier(.2, .7, .2, 1); }
+.mdl.is-open .mdl__body > * { transform: none; }
+.mdl .leadform, .mdl .quiz { background: none; padding: 0; }
+.mdl .leadform__inner { position: relative; }
+.mdl .form__textarea { resize: vertical; }
+@media (max-width: 760px) {
+  .mdl__x { top: 14px; right: 10px; }
+  .mdl__body { align-items: flex-start; padding: 64px 0 40px; }
+}
+
+/* ---- квиз (те же правила, что на «Услугах», чтобы окно работало на любой странице) ---- */
+.quiz__inner { display: grid; grid-template-columns: 520px 676px; justify-content: space-between; gap: 60px; align-items: start; }
+.quiz__title { margin-top: 26px; font-family: var(--f-head); font-weight: 700; font-size: 40px; line-height: 1.04; text-transform: uppercase; }
+.quiz__lead { margin-top: 26px; max-width: 470px; font-size: 18px; line-height: 1.3; color: var(--c-text-muted); }
+.quiz__perks { margin-top: 26px; max-width: 470px; }
+.quiz__perks li { display: flex; align-items: center; gap: 16px; padding: 14px 0; border-top: 1px solid var(--c-line-dark); font-size: 16px; }
+.quiz__perks .num { font-size: 18px; color: var(--c-text-muted); letter-spacing: 0; }
+.quiz__card { padding: 40px; background: linear-gradient(200deg, var(--c-grad-from) 0%, var(--c-grad-to) 100%); transition: background-color .4s ease; }
+.quiz.is-done .quiz__card { background: var(--bg-2); }
+.quiz__wa { display: none; margin-top: 36px; }
+.quiz.is-done .quiz__wa { display: inline-flex; }
+.quiz__progress { margin-bottom: 32px; }
+.quiz__meta { display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 14px; color: var(--c-text-muted); }
+.quiz__meta .hand { font-size: 17px; color: var(--pink); letter-spacing: 0; }
+.quiz__bar { margin-top: 14px; height: 2px; background: var(--c-line-dark); }
+.quiz__bar i { display: block; height: 100%; width: 16.66%; background: var(--pink); transition: width .5s cubic-bezier(.2, .7, .2, 1); }
+.quiz__step { display: none; margin: 0; padding: 0; border: 0; min-width: 0; }
+.quiz__step.is-active { display: block; animation: quizIn .45s cubic-bezier(.2, .7, .2, 1); }
+@keyframes quizIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+.quiz__q { padding: 0; font-family: var(--f-head); font-weight: 700; font-size: 28px; line-height: 1.08; text-transform: uppercase; }
+.quiz__opts { margin-top: 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.qopt { position: relative; display: flex; align-items: center; gap: 14px; padding: 18px 20px; border: 1px solid var(--c-line-dark); cursor: pointer; transition: background-color .25s ease, border-color .25s ease, color .25s ease; }
+.qopt input { position: absolute; opacity: 0; pointer-events: none; }
+.qopt::before { content: ""; flex: none; width: 18px; height: 18px; border: 1.5px solid var(--c-white-60); border-radius: 50%; box-sizing: border-box; transition: border .25s ease; }
+.qopt span { display: flex; flex-direction: column; gap: 2px; }
+.qopt b { font-weight: 400; font-size: 16px; }
+.qopt small { font-size: 14px; color: var(--c-text-muted); transition: color .25s ease; }
+.qopt:hover { border-color: var(--c-white-60); }
+.qopt:has(input:checked) { background: var(--c-light); border-color: var(--c-light); color: var(--bg); }
+.qopt:has(input:checked)::before { border: 5px solid var(--bg); }
+.qopt:has(input:checked) small { color: var(--c-ink-3); }
+.qopt:has(input:focus-visible) { outline: 2px solid var(--pink); outline-offset: 2px; }
+.quiz__note { margin-top: 16px; font-size: 16px; line-height: 1.3; color: var(--c-text-muted); }
+.quiz__step--form.is-active { display: flex; flex-direction: column; gap: 15px; }
+.quiz__step--form .quiz__note { margin: 0 0 6px; }
+.quiz__send { margin-top: 6px; }
+.quiz__nav { margin-top: 32px; display: flex; align-items: center; gap: 20px; }
+.quiz__back { font-weight: 600; font-size: 14px; color: var(--c-text-muted); transition: color .25s ease; }
+.quiz__back:hover { color: var(--c-light); }
+.quiz__back[hidden] { display: none; }
+.quiz__hint { margin-right: auto; font-size: 14px; color: var(--c-text-muted); }
+.quiz__hint.is-error { color: var(--c-error-dark); }
+.quiz__next { min-width: 120px; }
+.quiz.is-form .quiz__next, .quiz.is-form .quiz__hint, .quiz.is-done .quiz__nav, .quiz.is-done .quiz__progress { display: none; }
+.quiz.is-form .quiz__nav { justify-content: flex-start; }
+.quiz__ok { position: relative; display: block; width: 64px; height: 64px; border-radius: 50%; background: var(--wine-grad); }
+.quiz__ok::after { content: ""; position: absolute; left: 22px; top: 18px; width: 12px; height: 22px; border: solid var(--c-light); border-width: 0 3px 3px 0; transform: rotate(45deg); }
+.quiz__done .quiz__q { margin-top: 24px; font-size: 32px; }
+.quiz__result { margin-top: 24px; width: 440px; max-width: 100%; min-height: 325px; padding: 22px 24px; display: flex; flex-direction: column; background: var(--wine-grad); }
+.quiz__result ul { margin-top: auto; padding-top: 30px; }
+.quiz__result .hand { font-size: 18px; color: var(--pink); letter-spacing: 0; }
+.quiz__result b { display: block; margin-top: 12px; font-family: var(--f-head); font-weight: 700; font-size: 28px; line-height: 1.1; text-transform: uppercase; }
+.quiz__result li { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--c-line-dark); font-size: 16px; }
+.quiz--wine { background: linear-gradient(160deg, #2a0510 0%, var(--c-bg) 70%); }
+.quiz--wine .sec-head__label .tsticker { font-size: 24px; margin-left: 10px; }
+.quiz--wine .quiz__perks .num { color: var(--c-champ); }
+.quiz--wine .quiz__card, .quiz--wine.is-done .quiz__card { background: var(--bg-2); }
+.quiz--wine .quiz__meta { color: var(--c-light); }
+.quiz--wine .quiz__meta .hand { color: var(--c-champ); font-size: 20px; }
+.quiz--wine .quiz__bar { background: rgba(255, 255, 255, .18); }
+.quiz--wine .quiz__bar i { background: var(--c-champ); }
+.quiz--wine .qopt { border: 0; background: var(--c-bg-3); }
+.quiz--wine .qopt::before { border-color: var(--c-text-muted); }
+.quiz--wine .qopt:hover { background: #47202d; }
+.quiz--wine .qopt:has(input:checked) { background: var(--c-champ); color: var(--c-ink); }
+.quiz--wine .qopt:has(input:checked)::before { border: 5px solid var(--c-ink); }
+.quiz--wine .qopt:has(input:checked) small { color: var(--c-label); }
+.quiz--wine .form__input, .quiz--wine .form__phone { background: var(--c-bg-3); border-color: transparent; color: var(--c-light); }
+.quiz__ok3d { display: block; width: 130px; height: auto; margin: 0 auto; }
+.quiz--wine .quiz__done { text-align: center; }
+@media (max-width: 1024px) { .quiz__inner { grid-template-columns: 1fr; } .quiz__ok3d { width: 100px; } }
+@media (max-width: 760px) {
+  .quiz__title { margin-top: 16px; font-size: 28px; }
+  .quiz__lead { margin-top: 16px; font-size: 16px; }
+  .quiz__card { padding: 24px 16px; margin: 0 -16px; }
+  .quiz__q { font-size: 22px; }
+  .quiz__opts { grid-template-columns: 1fr; margin-top: 22px; }
+  .qopt { padding: 14px 16px; }
+  .quiz__nav { flex-wrap: wrap; }
+  .quiz__hint { order: -1; width: 100%; }
+  .quiz__next { margin-left: auto; }
+  .quiz__done .quiz__q { font-size: 26px; }
+}
+.quiz--wine .sec-head__label { color: var(--c-text-muted); }
+.mdl__x:focus { outline: none; }
+.mdl__x:focus-visible { outline: 2px solid var(--c-champ); outline-offset: 2px; }
+
+/* ===== Заголовки Oswald: чуть больше межстрочный интервал, чтобы «Й» и «Ё» не врезались в строку выше (на всех ширинах) ===== */
+.hero__title, .sec-title, .deck__title, .process__title, .guarantee__title, .ahero__title, .phero__title, .phero-usl__title, .phero-usl3__title,
+.quiz__title, .stariffs__title, .tariff__price, .dir__kicker, .dir__title, .process__item h3, .steps__title, .compare__head h3, .gcard h3,
+.checks__title, .form__title, .ccard__head h3, .reviews__title, .dcardx h3, .task__kicker, .task__head h3, .pdir__title, .scard h3,
+.qside__card h3, .tcard h3, .stopic h3, .sexp__card h3, .clist__item h3, .hcase2 h3, .quiz__q, .mm__photo b, .form__done-title, .trust-m__title,
+.check__name, .book h3, .ep h3, .rvid h3, .kase__num, .scene__title { line-height: 1.14; }
+.ahero__title { line-height: 1.14 !important; }
+/* мобилка: чекбокс согласия во всех формах — ровно 15 px под кнопкой (макет 852:3882) */
+@media (max-width: 760px) {
+  .form, .leadform--final .form, .quiz__step--form.is-active { gap: 15px; }
+  .form .consent, .leadform--final .consent, .quiz__step--form .consent, .quiz--light .quiz__step--form .consent { margin-top: 0; }
+}
+/* шторка снизу (bottom sheet): окно «Посмотрите 1-й урок бесплатно» */
+.mdl--sheet .mdl__body > * { position: relative; }
+.mdl--sheet .mdl__x { position: absolute; top: -56px; right: 0; }
+@media (max-width: 760px) {
+  .mdl--sheet { background: rgba(10, 3, 6, .62); }
+  .mdl--sheet .mdl__body { align-items: flex-end; padding: 72px 0 0; }
+  .mdl--sheet .mdl__body > * { padding: 44px 0 32px !important; border-radius: 20px 20px 0 0; background: linear-gradient(160deg, #2a0510 0%, #1c0810 70%); transform: translateY(100%); transition: transform .4s cubic-bezier(.2, .7, .2, 1); }
+  .mdl--sheet .mdl__body > *::before { content: ""; position: absolute; left: 50%; top: 12px; width: 44px; height: 4px; margin-left: -22px; border-radius: 2px; background: rgba(255, 255, 255, .25); }
+  .mdl--sheet.is-open .mdl__body > * { transform: none; }
+  .mdl--sheet .mdl__x { top: 6px; right: 6px; }
+}
+/* окно квиза — тоже ровный фон #1C0810 */
+.mdl--quiz { background: #1c0810; }
+.mdl--quiz .quiz--wine { background: none !important; }
+/* окно «Пример договора»: белая заглушка, позже – PDF */
+.mdl--dogovor .mdl__body { justify-content: center; padding: 96px 24px 40px; }
+.dogph { width: 100%; max-width: 760px; min-height: 70vh; display: grid; place-items: center; background: #fff; color: #1c0810; box-shadow: 0 30px 80px rgba(0, 0, 0, .35); }
+.dogph__t { font-family: var(--f-head); font-weight: 700; font-size: 40px; line-height: 1.14; text-transform: uppercase; }
+@media (max-width: 760px) { .mdl--dogovor .mdl__body { align-items: center; padding: 64px 16px 24px; } .dogph { min-height: calc(100vh - 100px); min-height: calc(100dvh - 100px); } .dogph__t { font-size: 30px; } }
