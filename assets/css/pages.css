@@ -4184,3 +4184,10 @@ button.kb__btn { font-family: inherit; cursor: pointer; }
 }
 /* «Почему этот бизнес не простаивает»: плитки той же ширины, что и раньше на 1440 (754 px), заголовок ужимается */
 @media (min-width: 1101px) { .fb-split:has(> .fb-bento), .fb-split:has(.fb-bento) { grid-template-columns: minmax(0, 1fr) minmax(0, 754px); } }
+/* О компании, мобилка: на широких телефонах (Pro Max и т.п.) картинка с лентой растёт по ширине –
+   цифры опускаются вместе с ней, чтобы между лентой и текстом оставалось ~30px. На 375–402 без изменений. */
+@media (max-width: 760px) { .page-about .ahero__art { height: max(553px, calc(138vw - 10px)); } }
+/* соцсети: Instagram и Facebook + сноска про Meta */
+.ksocial__list .ksr:nth-child(4) .ksr__ic, .ksocial__list .ksr:nth-child(4):hover .ksr__ic { color: #e1306c; }
+.ksocial__list .ksr:nth-child(5) .ksr__ic, .ksocial__list .ksr:nth-child(5):hover .ksr__ic { color: #1877f2; }
+.ksocial__note { margin-top: 16px; font-size: 13px; line-height: 1.45; opacity: .6; }

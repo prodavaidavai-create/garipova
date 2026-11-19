@@ -136,3 +136,30 @@ html.mdl-lock { overflow: hidden; }
 .dogph { width: 100%; max-width: 760px; min-height: 70vh; display: grid; place-items: center; background: #fff; color: #1c0810; box-shadow: 0 30px 80px rgba(0, 0, 0, .35); }
 .dogph__t { font-family: var(--f-head); font-weight: 700; font-size: 40px; line-height: 1.14; text-transform: uppercase; }
 @media (max-width: 760px) { .mdl--dogovor .mdl__body { align-items: center; padding: 64px 16px 24px; } .dogph { min-height: calc(100vh - 100px); min-height: calc(100dvh - 100px); } .dogph__t { font-size: 30px; } }
+
+/* окно «Пример договора»: текст договора на белом листе */
+.dogph__load { font-size: 16px; color: rgba(28, 8, 16, .6); }
+.dogph.is-doc { display: block; min-height: 0; padding: 64px 72px; }
+.dogdoc { font-size: 14px; line-height: 1.55; color: #1c0810; }
+.dogdoc p { margin: 0 0 8px; }
+.dogdoc p.c { text-align: center; }
+.dogdoc p.h { margin: 28px 0 12px; font-weight: 700; text-align: center; }
+.dogdoc .dn { display: inline-block; min-width: 2.6em; margin-right: 4px; font-weight: 600; }
+.dogdoc p.n2 { padding-left: 2.8em; }
+.dogdoc p.li { position: relative; padding-left: 1.4em; }
+.dogdoc p.li::before { content: "•"; position: absolute; left: .3em; }
+.dogdoc b { font-weight: 700; }
+.dogdoc .dt { margin: 12px 0 20px; overflow-x: auto; }
+.dogdoc table { width: 100%; border-collapse: collapse; }
+.dogdoc td { padding: 8px 10px; vertical-align: top; border: 1px solid rgba(28, 8, 16, .25); }
+.dogdoc td p { margin: 0 0 6px; }
+@media (max-width: 760px) {
+  .dogph.is-doc { padding: 32px 18px; }
+  .dogdoc { font-size: 13px; }
+  .dogdoc .dn { min-width: 0; margin-right: 6px; }
+  .dogdoc p.n2 { padding-left: 0; }
+  .dogdoc td { padding: 6px; }
+}
+.dogph.is-doc { min-width: 0; max-width: min(760px, 100%); }
+.dogdoc { overflow-wrap: anywhere; }
+.dogdoc table { table-layout: fixed; }

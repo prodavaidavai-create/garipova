@@ -1,3 +1,57 @@
+/* ============ Заявки: одно сообщение со всеми полями формы уходит в Telegram-чат и на info@garipova.biz.
+   Отправку делает веб-приложение Google Apps Script (код – в «_setup/forms-apps-script.gs»), его адрес – ниже.
+   Пока адреса нет, заявка только показывает экран благодарности. ============ */
+window.GP_FORM_ENDPOINT = '';
+window.GP_DONE_TITLE = 'Благодарю! Ваша заявка принята';
+window.GP_DONE_TEXT = 'Мы свяжемся с&nbsp;вами в&nbsp;рабочее время: Пн–Пт, 9:00–18:00.<br>Если хотите быстрее&nbsp;– напишите нам сами в&nbsp;<a href="https://wa.me/79688888707" target="_blank" rel="noopener">WhatsApp</a> или&nbsp;<a href="https://t.me/TanzilyaGaripova" target="_blank" rel="noopener">Telegram</a>.<br>Ответим в&nbsp;течение 15&nbsp;минут.';
+window.gpLead = (form, kind) => {
+  const clean = (s) => (s || '').replace(/ /g, ' ').replace(/\s+/g, ' ').trim();
+  const rows = [];
+  const add = (k, v) => { v = clean(v); if (v) rows.push(k + ': ' + v); };
+  const box = form.closest('.mdl, section') || document.body;
+  const head = form.querySelector('h2, h3') || box.querySelector('.sec-title, h2, h3');
+  const headTxt = head ? head.innerText || head.textContent : '';
+  add('Форма', kind || headTxt);
+  add('Страница', document.title.split(/\s[–—-]\s/)[0]);
+  const LABELS = { name: 'Имя', email: 'Email', city: 'Город', topic: 'Запрос', book: 'Книга', question: 'Вопрос', company: 'Компания' };
+  const seen = new Set();
+  form.querySelectorAll('input, select, textarea').forEach((el) => {
+    const n = el.name; if (!n || n === 'consent' || el.type === 'checkbox' || el.type === 'hidden') return;
+    if (el.type === 'radio') {
+      if (!el.checked) return;
+      const q = el.closest('fieldset')?.querySelector('legend');
+      const opt = el.closest('label')?.querySelector('b') || el.closest('label');
+      add(clean(q ? q.textContent : n), opt ? opt.textContent : el.value); return;
+    }
+    if (el.type === 'file') { if (el.files && el.files[0]) add('Файл', el.files[0].name + ' (сам файл попросите прислать в мессенджер)'); return; }
+    if (n === 'phone_cc') return;
+    if (el.type === 'tel' || n === 'phone') {
+      if (!el.value.replace(/\D/g, '')) return;
+      const cc = el.closest('.form__phone')?.querySelector('[name="phone_cc"]')?.value || '+7';
+      add('Телефон', clean(cc + ' ' + el.value)); return;
+    }
+    const v = el.tagName === 'SELECT' ? (el.selectedIndex > -1 && !el.options[el.selectedIndex].disabled ? el.options[el.selectedIndex].text : '') : el.value;
+    if (!clean(v)) return;
+    let k = LABELS[n] || clean(el.getAttribute('aria-label') || el.placeholder || n);
+    if (el.tagName === 'TEXTAREA') k = n === 'question' ? 'Вопрос' : 'Задача';
+    if (seen.has(k + v)) return; seen.add(k + v);
+    add(k, v);
+  });
+  // переключатели: «Как удобнее связаться?», «Тариф», «Ваш опыт», выбор мессенджера
+  form.querySelectorAll('.seg').forEach((seg) => {
+    const on = seg.querySelector('button.is-active'); if (!on) return;
+    const lab = seg.closest('.form__via')?.querySelector('span');
+    add(lab ? clean(lab.textContent).replace(/\?$/, '') : 'Мессенджер', on.textContent);
+  });
+  add('Ссылка', location.href.split('#')[0]);
+  const text = '🔔 Новая заявка с сайта\n\n' + rows.join('\n');
+  window.gpLastLead = text;
+  if (!window.GP_FORM_ENDPOINT) { console.info('[заявка – адрес отправки ещё не подключён]\n' + text); return; }
+  try {
+    fetch(window.GP_FORM_ENDPOINT, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify({ subject: 'Заявка с сайта: ' + clean(kind || headTxt).slice(0, 80), text }) });
+  } catch (e) {}
+};
+
 /* ============ При обновлении страница всегда открывается с первого блока ============ */
 (() => {
   if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
@@ -283,7 +337,8 @@
       const done = document.createElement('div');
       done.className = 'form__done';
       done.setAttribute('role', 'status');
-      done.innerHTML = '<img class="form__done-ic" src="assets/img/3d/success.png" alt=""><h3 class="form__done-title">Спасибо! Заявка отправлена</h3><p class="form__done-text">Свяжемся в рабочее время: Пн–Пт, 9:00–18:00. Если удобнее, напишите нам сами, ответим за 15 минут.</p>';
+      window.gpLead(form);
+      done.innerHTML = '<img class="form__done-ic" src="assets/img/3d/success.png" alt=""><h3 class="form__done-title">' + window.GP_DONE_TITLE + '</h3><p class="form__done-text">' + window.GP_DONE_TEXT + '</p>';
       form.appendChild(done);
       form.classList.add('is-done');
     });
@@ -1017,7 +1072,6 @@ document.querySelectorAll('.stlesson__form').forEach((form) => {
   };
   form.addEventListener('input', sync); form.addEventListener('change', sync);
   form.addEventListener('click', () => setTimeout(sync, 0));
-  form.addEventListener('submit', (e) => { if (btn.disabled) e.preventDefault(); });
   sync();
 });
 
@@ -1029,4 +1083,25 @@ document.addEventListener('click', (e) => {
   const sel = document.querySelector('#lead select[name="book"]'); if (!sel || !title) return;
   const o = [...sel.options].find((x) => x.value !== '' && !x.disabled && title.startsWith(norm(x.text)));
   if (o) { o.selected = true; sel.dispatchEvent(new Event('change', { bubbles: true })); }
+});
+
+/* ============ Короткие формы (1-й урок, «Не уверены?», программа в PDF): заявка без перезагрузки страницы ============ */
+document.querySelectorAll('.stlesson__form, .stmid__form, .stprog__pdf').forEach((form) => {
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('[type="submit"]');
+    if (btn && btn.disabled) return;
+    const phone = form.querySelector('[name="phone"]');
+    if (phone && !(window.gpPhoneOk ? window.gpPhoneOk(phone) : phone.value.replace(/\D/g, '').length >= 10)) { if (window.gpPhoneHint) window.gpPhoneHint(phone, true); phone.focus(); return; }
+    const consent = form.querySelector('.consent input');
+    if (consent && !consent.checked) { form.querySelector('.consent').classList.add('is-error'); return; }
+    window.gpLead(form);
+    form.style.minHeight = form.offsetHeight + 'px';
+    const done = document.createElement('div');
+    done.className = 'form__done form__done--mini';
+    done.setAttribute('role', 'status');
+    done.innerHTML = '<img class="form__done-ic" src="assets/img/3d/success.png" alt=""><h3 class="form__done-title">' + window.GP_DONE_TITLE + '</h3><p class="form__done-text">' + window.GP_DONE_TEXT + '</p>';
+    form.appendChild(done);
+    form.classList.add('is-done');
+  });
 });

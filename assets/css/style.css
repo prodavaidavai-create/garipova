@@ -2015,3 +2015,8 @@ img[src*="12-rzd"] { transform: scale(.5) !important; }
 /* QA: подвал – колонка «Сайт создан» не обрезается на 1280–1440 */
 @media (min-width: 1101px) { .fx__top { grid-template-columns: minmax(0, 400px) 170px 215px 200px 215px 131px; } }
 @media (min-width: 1101px) and (max-width: 1380px) { .career--v2 .ccard__art { transform: scale(.9); transform-origin: left top; } }
+/* экран благодарности: ссылки на мессенджеры и короткие формы (1-й урок, «Не уверены?», программа в PDF) */
+.form__done-text a, .quiz__note a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+.form__done-text { max-width: 420px; }
+.stlesson__form.is-done > :not(.form__done), .stmid__form.is-done > :not(.form__done), .stprog__pdf.is-done > :not(.form__done) { display: none !important; }
+.form__done--mini { display: flex; width: 100%; border-radius: inherit; }

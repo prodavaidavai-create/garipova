@@ -6,7 +6,7 @@
     // пример договора: пока белая заглушка – когда будет файл, сюда встанет PDF с кнопкой «Скачать PDF»
     // общая форма обратной связи (как в конце главной); тема подставляется из data-topic кнопки
     lead: `<div class="leadform leadform--final mdl__lead"><div class="container leadform__inner"><div class="leadform__left"><h2 class="sec-title">Расскажите о задаче –<br>подскажем, с чего начать</h2><ol class="form__steps"><li><span class="num">(01)</span>Свяжемся в рабочее время: Пн–Пт, 9:00–18:00</li><li><span class="num">(02)</span>Бесплатно составим критерии подбора</li><li><span class="num">(03)</span>Расскажем условия и стоимость выбранного направления</li></ol><div class="contact-card"><img class="contact-card__ava" src="assets/img/contact-ava.jpg" alt=""><div><b>Танзиля Гарипова</b><a href="tel:+79689488888"><span class="flag"></span>+7 968 948 8888</a></div><i></i><span>Пн–Пт<br>9:00–18:00</span></div></div><form class="form" novalidate><input class="form__input" type="text" name="name" placeholder="Имя" autocomplete="name"><input class="form__input" type="email" name="email" placeholder="Email" autocomplete="email"><label class="form__phone"><span class="flag"></span><span>+7</span><input type="tel" name="phone" placeholder="Телефон" autocomplete="tel-national"></label><label class="form__select"><select name="topic" required aria-label="Что вас интересует?"><option value="" selected disabled>Что вас интересует?</option><option>Подбор ассистента</option><option>Шеринг ассистента</option><option>Подбор любого персонала</option><option>Курс для руководителей</option><option>Обучение ассистентов</option><option>Трудоустройство</option><option>Консультация с Танзилей</option><option>Франшиза</option><option>Сотрудничество</option><option>Отправить резюме</option><option>Другое</option></select></label><label class="form__file" hidden><input type="file" name="resume" accept=".pdf,.doc,.docx,.rtf,.txt,.jpg,.jpeg,.png"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21.4 11.1l-8.5 8.5a5.5 5.5 0 01-7.8-7.8l8.5-8.5a3.7 3.7 0 015.2 5.2l-8.5 8.5a1.8 1.8 0 01-2.6-2.6l7.8-7.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="form__file-t">Прикрепить резюме</span><small>PDF, DOC, JPG&nbsp;– до&nbsp;5&nbsp;МБ</small></label><div class="form__via"><span>Как удобнее связаться?</span><div class="seg"><button type="button" class="is-active"><img src="assets/img/whatsapp.svg" alt="">Whats App</button><button type="button"><img src="assets/img/telegram.svg" alt="">Telegram</button><button type="button">Звонок</button></div></div><button class="btn btn--white form__submit" type="submit">Отправить заявку</button><label class="consent"><input type="checkbox" name="consent"><span class="consent__box" aria-hidden="true"></span><span class="form__policy">Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных</span></label></form></div></div>`,
-    dogovor: `<div class="dogph"><p class="dogph__t">Договор</p></div>`,
+    dogovor: `<div class="dogph"><p class="dogph__load">Загружаем договор…</p></div>`,
     quiz: `<section class="quiz quiz--wine is-first mdl__quiz">  <div class="container quiz__inner">
     <div class="quiz__left">
       <p class="sec-head__label">Подбор за 1 минуту <span class="tsticker" style="--r:-4deg">по&nbsp;телефону или в&nbsp;мессенджере</span></p>
@@ -76,8 +76,8 @@
       </fieldset>
       <div class="quiz__step quiz__done" data-hand="">
         <img class="quiz__ok3d" src="assets/img/3d/success.png" alt="">
-        <h3 class="quiz__q">Спасибо! Заявка отправлена</h3>
-        <p class="quiz__note">Свяжемся в рабочее время: Пн–Пт, 9:00–18:00. Если удобнее, напишите нам сами, ответим за 15 минут.</p>
+        <h3 class="quiz__q">Благодарю! Ваша заявка принята</h3>
+        <p class="quiz__note">Мы свяжемся с&nbsp;вами в&nbsp;рабочее время: Пн–Пт, 9:00–18:00.<br>Если хотите быстрее&nbsp;– напишите нам сами в&nbsp;<a href="https://wa.me/79688888707" target="_blank" rel="noopener">WhatsApp</a> или&nbsp;<a href="https://t.me/TanzilyaGaripova" target="_blank" rel="noopener">Telegram</a>.<br>Ответим в&nbsp;течение 15&nbsp;минут.</p>
       </div>
       <div class="quiz__nav">
         <button class="quiz__back" type="button" hidden>← Назад</button>
@@ -128,6 +128,9 @@
     lastFocus = document.activeElement;
     m.hidden = false;
     m.scrollTop = 0;
+    // «Пример договора»: текст договора подгружается из assets/docs/dogovor.html при первом открытии
+    const dph = k === 'dogovor' && m.querySelector('.dogph:not([data-ok])');
+    if (dph) { dph.dataset.ok = '1'; fetch('assets/docs/dogovor.html?v=20261119a').then((r) => r.ok ? r.text() : Promise.reject()).then((h) => { dph.innerHTML = h; dph.classList.add('is-doc'); }).catch(() => { delete dph.dataset.ok; dph.innerHTML = '<p class="dogph__load">Не удалось загрузить договор. Попробуйте ещё раз.</p>'; }); }
     document.documentElement.classList.add('mdl-lock');
     requestAnimationFrame(() => m.classList.add('is-open'));
     opened = m;
@@ -220,6 +223,7 @@
       if (window.gpPhoneOk ? !window.gpPhoneOk(phone) : !phone.value.trim()) { if (window.gpPhoneHint) window.gpPhoneHint(phone, true); phone.focus(); return; }
       const consent = form.querySelector('.consent');
       if (consent && !consent.querySelector('input').checked) { consent.classList.add('is-error'); return; }
+      if (window.gpLead) window.gpLead(form, 'Квиз подбора');
       show(steps.length - 1);
     });
     quiz.quizReset = () => { form.reset(); show(0); };
