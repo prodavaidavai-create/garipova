@@ -37,3 +37,7 @@
   .tvr__card figcaption b { font-size: 18px; }
 }
 @media (prefers-reduced-motion: reduce) { .tvr__play span { animation: none; } }
+/* окно с вертикальным видео (кнопка data-vid) */
+.vid-pop__frame { width: min(420px, 100%, calc((100vh - 48px) * 9 / 16)); width: min(420px, 100%, calc((100dvh - 48px) * 9 / 16)); aspect-ratio: 9 / 16; overflow: hidden; border-radius: 20px; background: #000; }
+.vid-pop__frame video { display: block; width: 100%; height: 100%; object-fit: cover; }
+@media (max-width: 760px) { .vid-pop { padding: 64px 16px 16px; } .vid-pop .yt-pop__x { top: 8px; right: 8px; } }
