@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <!-- адреса стилей и ссылок считаются от корня сайта: работает и на github.io/garipova/, и на своём домене -->
+  <script>document.write('<base href="' + (location.pathname.indexOf('/garipova/') === 0 ? '/garipova/' : '/') + '">');</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#1c0810">
+  <title>503 – Сайт ненадолго на обслуживании | Танзиля Гарипова</title>
+  <link rel="icon" href="assets/img/logo.png">
+  <link rel="stylesheet" href="assets/fonts/fonts.css?v=2">
+  <link rel="stylesheet" href="assets/css/style.css?v=20261124a">
+  <style>
+    html, body { height: 100%; }
+    body { margin: 0; background: #1c0810; color: #fff; }
+    .err { position: relative; min-height: 100%; min-height: 100svh; display: flex; flex-direction: column; overflow: hidden; }
+    .err__top { position: relative; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 24px var(--pad, 62px); border-bottom: 1px solid rgba(255, 255, 255, .12); }
+    .err__logo img { display: block; width: 52px; height: auto; }
+    .err__tel { color: #fff; text-decoration: none; font-weight: 600; font-size: 16px; }
+    .err__main { position: relative; z-index: 2; flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 64px var(--pad, 62px) 80px; max-width: 1180px; }
+    .err__code { font-family: var(--f-head, 'Oswald', sans-serif); font-weight: 300; font-size: clamp(120px, 22vw, 300px); line-height: .9; letter-spacing: -.02em; color: #f5e6c8; }
+    .err__title { margin-top: 24px; font-family: var(--f-head, 'Oswald', sans-serif); font-weight: 700; font-size: clamp(32px, 4.4vw, 56px); line-height: 1.14; text-transform: uppercase; }
+    .err__text { margin-top: 20px; max-width: 560px; font-size: 18px; line-height: 1.5; color: rgba(255, 255, 255, .72); }
+    .err__btns { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 40px; }
+    .err__links { display: flex; flex-wrap: wrap; gap: 10px 28px; margin: 48px 0 0; padding: 24px 0 0; border-top: 1px solid rgba(255, 255, 255, .12); list-style: none; }
+    .err__links a { color: rgba(255, 255, 255, .78); text-decoration: none; font-size: 16px; }
+    .err__links a:hover { color: #fff; }
+    .err__links a::after { content: " ↗"; color: #e4c7c7; }
+    .err__circle { position: absolute; z-index: 1; right: -18vw; top: 50%; width: min(1100px, 90vw); transform: translateY(-50%); opacity: .55; pointer-events: none; }
+    @media (max-width: 760px) {
+      .err__top { padding: 16px; }
+      .err__logo img { width: 44px; }
+      .err__main { padding: 48px 16px 56px; }
+      .err__text { font-size: 16px; }
+      .err__btns { flex-direction: column; gap: 12px; margin-top: 32px; }
+      .err__btns .btn { width: 100%; }
+      .err__links { flex-direction: column; gap: 14px; margin-top: 36px; }
+      .err__circle { right: -60vw; width: 150vw; opacity: .35; }
+    }
+  </style>
+</head>
+<body>
+<div class="err">
+  <img class="err__circle" src="assets/img/circle-small.svg" alt="" aria-hidden="true">
+  <header class="err__top">
+    <a class="err__logo" href="index.html" aria-label="На главную"><img src="assets/img/logo.png" alt="Танзиля Гарипова"></a>
+    <a class="err__tel" href="tel:+79689488888">+7 968 948 8888</a>
+  </header>
+  <main class="err__main">
+    <p class="err__code">503</p>
+    <h1 class="err__title">Сайт ненадолго на&nbsp;обслуживании</h1>
+    <p class="err__text">Обновляем сайт и&nbsp;скоро вернёмся. Если вопрос срочный&nbsp;– позвоните или напишите нам.</p>
+    <div class="err__btns">
+      <a class="btn btn--white" href="index.html">На главную</a>
+      <a class="btn btn--outline-white" href="https://wa.me/79688888707" target="_blank" rel="noopener">Написать в WhatsApp</a>
+    </div>
+    <ul class="err__links">
+      <li><a href="podbor.html">Подбор ассистента</a></li>
+      <li><a href="obuchenie.html">Обучение ассистентов</a></li>
+      <li><a href="kurs.html">Курс для руководителей</a></li>
+      <li><a href="kontakty.html">Контакты</a></li>
+    </ul>
+  </main>
+</div>
+</body>
+</html>
