@@ -1,7 +1,7 @@
 /* ============ Заявки: одно сообщение со всеми полями формы уходит в Telegram-чат и на info@garipova.biz.
    Отправку делает веб-приложение Google Apps Script (код – в «_setup/forms-apps-script.gs»), его адрес – ниже.
    Пока адреса нет, заявка только показывает экран благодарности. ============ */
-window.GP_FORM_ENDPOINT = '';
+window.GP_FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbz2pE3kmHSm7VyDdyNCSWx17oQoSEwn7N0MrL2yjQ03bQiCsHTdP_u8IJzvQRJRjXI/exec'; // скрипт в аккаунте garipova.biz.leads@gmail.com
 window.GP_DONE_TITLE = 'Благодарю! Ваша заявка принята';
 window.GP_DONE_TEXT = 'Мы свяжемся с&nbsp;вами в&nbsp;рабочее время: Пн–Пт, 9:00–18:00.<br>Если хотите быстрее&nbsp;– напишите нам сами в&nbsp;<a href="https://wa.me/79688888707" target="_blank" rel="noopener">WhatsApp</a> или&nbsp;<a href="https://t.me/TanzilyaGaripova" target="_blank" rel="noopener">Telegram</a>.<br>Ответим в&nbsp;течение 15&nbsp;минут.';
 window.gpLead = (form, kind) => {
